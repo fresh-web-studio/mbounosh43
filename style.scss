@@ -80,7 +80,7 @@ header {
     display: none;
   }
 
-  /* скрываем чекбокс */
+  /* скрываем checkbox */
   #menu-toggle-left {
     opacity: 0;
   }
@@ -309,7 +309,7 @@ main {
       color: $blue;
       font-size: 3vw;
       font-weight: bold;
-      font-family: "fa-solid-900";
+      font-family: "fa-solid-900", serif;
       margin: 0;
     }
     .owl-theme .owl-nav [class*='owl-']:hover {
@@ -941,7 +941,7 @@ main {
   header {
     /************** Burger menu mobile ***************/
 
-    /* скрываем чекбокс */
+    /* скрываем checkbox */
     #menu-toggle {
       opacity: 0;
     }
@@ -1120,7 +1120,7 @@ main {
     }
     .menu-btn-left__info:after {
       content: "\f107";
-      font-family: fa-solid-900;
+      font-family: "fa-solid-900", serif;
       margin-left: 13px;
       float: right;
     }
