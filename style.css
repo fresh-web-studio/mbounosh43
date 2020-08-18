@@ -451,8 +451,8 @@ main .additional-items {
     height: 100%; }
   main .additional-items .additional-items__info {
     margin-top: 1.563vw;
-    font-size: 25px;
-    line-height: 29px;
+    font-size: 1.302vw;
+    line-height: 1.510vw;
     text-align: center;
     color: #FFFFFF; }
 
@@ -693,7 +693,30 @@ main .additional-items {
       border-radius: 1.4588vw;
       height: 2.9162vw;
       width: 18.2294vw;
-      background: linear-gradient(90deg, #2D87C9 -0.12%, #31ADCA 99.88%); } }
+      background: linear-gradient(90deg, #2D87C9 -0.12%, #31ADCA 99.88%); }
+  main .additional-items {
+    padding: 7.9478vw 0 2.3478vw; }
+    main .additional-items .additional-items__title {
+      padding-bottom: 2.9162vw;
+      font-size: 2.4066vw;
+      line-height: 2.9162vw; }
+    main .additional-items .additional-items__item-list {
+      margin-bottom: 2.8vw; }
+    main .additional-items .additional-items__item-frame {
+      width: 24.5793333333vw;
+      margin: 2.8588vw 4.011vw;
+      opacity: .9; }
+    main .additional-items .additional-items__item-frame:hover {
+      opacity: 1; }
+    main .additional-items .additional-items__img {
+      outline: 0.7294vw solid #fff;
+      height: 15.5316vw; }
+    main .additional-items .additional-items__img img {
+      height: 100%; }
+    main .additional-items .additional-items__info {
+      margin-top: 2.1882vw;
+      font-size: 1.8228vw;
+      line-height: 2.114vw; } }
 @media all and (max-width: 415px) {
   .container {
     width: 100vw;
@@ -997,6 +1020,29 @@ main .additional-items {
       width: 60.2417348864vw;
       font-size: 4.8208192728vw;
       line-height: 5.783132525vw;
-      background: linear-gradient(90deg, #2D87C9 -0.12%, #31ADCA 99.88%); } }
+      background: linear-gradient(90deg, #2D87C9 -0.12%, #31ADCA 99.88%); }
+  main .additional-items {
+    padding: 26.2646746755vw 0 7.7586505955vw; }
+    main .additional-items .additional-items__title {
+      padding-bottom: 9.6370120397vw;
+      font-size: 7.9529638484vw;
+      line-height: 9.6370120397vw; }
+    main .additional-items .additional-items__item-list {
+      margin-bottom: 9.25301204vw; }
+    main .additional-items .additional-items__item-frame {
+      width: 73.4901205054vw;
+      margin: 9.4473252928vw 13.2549397473vw;
+      opacity: .9; }
+    main .additional-items .additional-items__item-frame:hover {
+      opacity: 1; }
+    main .additional-items .additional-items__img {
+      outline: 2.4104096364vw solid #fff;
+      height: 51.3264577859vw; }
+    main .additional-items .additional-items__img img {
+      height: 100%; }
+    main .additional-items .additional-items__info {
+      margin-top: 7.2312289093vw;
+      font-size: 6.023710838vw;
+      line-height: 6.9860240902vw; } }
 
 /*# sourceMappingURL=style.css.map */

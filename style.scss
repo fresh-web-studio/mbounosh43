@@ -594,8 +594,8 @@ main {
     }
     .additional-items__info {
       margin-top: 1.563vw;
-      font-size: 25px;
-      line-height: 29px;
+      font-size: 1.302vw;
+      line-height: 1.510vw;
       text-align: center;
       color: #FFFFFF;
     }
@@ -921,6 +921,38 @@ main {
         height: 2.083vw * $coefficient;
         width: 13.021vw * $coefficient;
         background: linear-gradient(90deg, #2D87C9 -0.12%, #31ADCA 99.88%);
+      }
+    }
+    .additional-items {
+      padding: 5.677vw * $coefficient 0 1.677vw * $coefficient;
+      .additional-items__title {
+        padding-bottom: 2.083vw * $coefficient;
+        font-size: 1.719vw * $coefficient;
+        line-height: 2.083vw * $coefficient;
+      }
+      .additional-items__item-list {
+        margin-bottom: 2vw * $coefficient;
+      }
+      .additional-items__item-frame {
+        width: ($container / 3) - ((2.865vw * $coefficient) * 2);
+        margin: 2.042vw * $coefficient 2.865vw * $coefficient;
+        opacity: .9;
+
+      }
+      .additional-items__item-frame:hover {
+        opacity: 1;
+      }
+      .additional-items__img {
+        outline: 0.521vw * $coefficient solid #fff;
+        height: 11.094vw * $coefficient;
+      }
+      .additional-items__img img {
+        height: 100%;
+      }
+      .additional-items__info {
+        margin-top: 1.563vw * $coefficient;
+        font-size: 1.302vw * $coefficient;
+        line-height: 1.510vw * $coefficient;
       }
     }
   }
@@ -1331,6 +1363,38 @@ main {
         font-size: 1.042vw * $coefficient;
         line-height: 1.250vw * $coefficient;
         background: linear-gradient(90deg, #2D87C9 -0.12%, #31ADCA 99.88%);
+      }
+    }
+    .additional-items {
+      padding: 5.677vw * $coefficient 0 1.677vw * $coefficient;
+      .additional-items__title {
+        padding-bottom: 2.083vw * $coefficient;
+        font-size: 1.719vw * $coefficient;
+        line-height: 2.083vw * $coefficient;
+      }
+      .additional-items__item-list {
+        margin-bottom: 2vw * $coefficient;
+      }
+      .additional-items__item-frame {
+        width: ($container / 1) - ((2.865vw * $coefficient) * 2);
+        margin: 2.042vw * $coefficient 2.865vw * $coefficient;
+        opacity: .9;
+
+      }
+      .additional-items__item-frame:hover {
+        opacity: 1;
+      }
+      .additional-items__img {
+        outline: 0.521vw * $coefficient solid #fff;
+        height: 11.094vw * $coefficient;
+      }
+      .additional-items__img img {
+        height: 100%;
+      }
+      .additional-items__info {
+        margin-top: 1.563vw * $coefficient;
+        font-size: 1.302vw * $coefficient;
+        line-height: 1.510vw * $coefficient;
       }
     }
   }
