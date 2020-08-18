@@ -191,6 +191,12 @@ header {
   header .header__phone-mail a {
     color: #FFFFFF; }
 
+main .news__title, main .interview__title {
+  margin-top: 5.677vw;
+  font-weight: bold;
+  font-size: 1.719vw;
+  line-height: 2.083vw;
+  text-align: center; }
 main .slide-wrapper {
   height: 21.615vw;
   margin-top: 2.083vw; }
@@ -230,12 +236,6 @@ main .slide-wrapper {
     right: -0.1vw; }
 main .news {
   padding-bottom: 5.677vw; }
-  main .news .news__title {
-    margin-top: 5.677vw;
-    font-weight: bold;
-    font-size: 1.719vw;
-    line-height: 2.083vw;
-    text-align: center; }
   main .news .news__item-list {
     display: flex;
     justify-content: space-between;
@@ -455,6 +455,98 @@ main .additional-items {
     line-height: 1.510vw;
     text-align: center;
     color: #FFFFFF; }
+main .interview {
+  /* для элемента input c type="radio" */
+  /* для элемента label связанного с .custom-radio */
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  /* стили при наведении курсора на радио */
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  /* стили для радиокнопки, находящейся в фокусе */
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  /* стили для радиокнопки, находящейся в состоянии disabled */ }
+  main .interview .interview__title {
+    margin-bottom: 2.396vw; }
+  main .interview .wp-polls-form p strong {
+    font-size: 1.563vw;
+    line-height: 1.823vw;
+    font-weight: normal;
+    text-align: center; }
+  main .interview .wp-polls-ans {
+    margin: 0 auto;
+    display: block;
+    width: max-content; }
+  main .interview .wp-polls-ans a {
+    font-size: 0.938vw;
+    line-height: 1.094vw;
+    margin-top: 1.094vw;
+    margin-bottom: 3.906vw;
+    text-align: center;
+    color: #769498;
+    display: block; }
+  main .interview .wp-polls-ul {
+    font-size: 1.302vw;
+    line-height: 2.188vw;
+    margin-top: 2.344vw;
+    margin-bottom: 2.135vw;
+    list-style: none; }
+  main .interview .wp-polls-ul li {
+    margin-top: 1.250vw; }
+  main .interview .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0; }
+  main .interview .custom-radio + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none; }
+  main .interview .custom-radio + label::before {
+    content: '';
+    display: inline-block;
+    width: 1.823vw;
+    height: 1.823vw;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+    margin-right: 2.742vw;
+    background-color: #02adff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%; }
+  main .interview .custom-radio:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #DC2C16; }
+  main .interview .custom-radio:not(:disabled):active + label::before {
+    background-color: #DC2C16;
+    border-color: #DC2C16; }
+  main .interview .custom-radio:focus + label::before {
+    box-shadow: 0 0 0 0.2vw #2D87C9; }
+  main .interview .custom-radio:focus:not(:checked) + label::before {
+    border-color: #2D87C9; }
+  main .interview .custom-radio:checked + label::before {
+    border-color: #2D87C9;
+    background-color: #2D87C9;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); }
+  main .interview .custom-radio:disabled + label::before {
+    background-color: #DC2C16; }
+  main .interview .Buttons {
+    margin: 0 auto;
+    padding: 0.2vw 0 0;
+    width: 13.229vw;
+    height: 3.385vw;
+    border: 0;
+    border-radius: 2.604vw;
+    font-size: 1.042vw;
+    line-height: 1.250vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%); }
+  main .interview .Buttons:hover {
+    background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
+    filter: drop-shadow(0.26vw 0.26vw 1.042vw rgba(0, 0, 0, 0.51)); }
 
 @media all and (max-width: 1370px) {
   .container {
@@ -529,6 +621,12 @@ main .additional-items {
     header .header__phone-mail {
       margin-top: 0.84vw; }
 
+  main .news__title, main .interview__title {
+    margin-top: 7.9478vw;
+    font-weight: bold;
+    font-size: 2.4066vw;
+    line-height: 2.9162vw;
+    text-align: center; }
   main .slide-wrapper {
     height: 30.261vw;
     margin-top: 2.9162vw; }
@@ -548,12 +646,6 @@ main .additional-items {
       width: 4.06vw;
       height: 30.24vw;
       font-size: 4.2vw; }
-  main .news .news__title {
-    margin-top: 7.9478vw;
-    font-weight: bold;
-    font-size: 2.4066vw;
-    line-height: 2.9162vw;
-    text-align: center; }
   main .news .news__item-list {
     display: flex;
     justify-content: space-between;
@@ -716,7 +808,47 @@ main .additional-items {
     main .additional-items .additional-items__info {
       margin-top: 2.1882vw;
       font-size: 1.8228vw;
-      line-height: 2.114vw; } }
+      line-height: 2.114vw; }
+  main .interview {
+    /* создание в label псевдоэлемента  before со следующими стилями */ }
+    main .interview .interview__title {
+      margin-bottom: 3.3544vw; }
+    main .interview .wp-polls-form p strong {
+      font-size: 2.1882vw;
+      line-height: 2.5522vw; }
+    main .interview .wp-polls-ans a {
+      font-size: 1.3132vw;
+      line-height: 1.5316vw;
+      margin-top: 1.5316vw;
+      margin-bottom: 5.4684vw; }
+    main .interview .wp-polls-ul {
+      font-size: 1.8228vw;
+      line-height: 3.0632vw;
+      margin-top: 3.2816vw;
+      margin-bottom: 2.989vw; }
+    main .interview .wp-polls-ul li {
+      margin-top: 1.75vw; }
+    main .interview .custom-radio + label::before {
+      width: 2.5522vw;
+      height: 2.5522vw;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border-radius: 50%;
+      margin-right: 3.8388vw;
+      background-color: #02adff;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%; }
+    main .interview .Buttons {
+      width: 18.5206vw;
+      height: 4.739vw;
+      border-radius: 3.6456vw;
+      font-size: 1.4588vw;
+      line-height: 1.75vw;
+      background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%); }
+    main .interview .Buttons:hover {
+      background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
+      filter: drop-shadow(0.26vw 0.26vw 1.042vw rgba(0, 0, 0, 0.51)); } }
 @media all and (max-width: 415px) {
   .container {
     width: 100vw;
@@ -897,6 +1029,11 @@ main .additional-items {
       width: 65vw;
       font-size: 2.2vw; }
 
+  main .news__title, main .interview__title {
+    margin-top: 17vw;
+    margin-bottom: 5vw;
+    font-size: 7.9529638484vw;
+    line-height: 9.6370120397vw; }
   main .slide-wrapper {
     margin-top: 9vw; }
     main .slide-wrapper .owl-carousel .owl-nav button {
@@ -905,11 +1042,6 @@ main .additional-items {
       font-size: 4.88vw; }
     main .slide-wrapper .owl-theme .owl-nav {
       margin-top: 0.5vw; }
-  main .news .news__title {
-    margin-top: 17vw;
-    margin-bottom: 5vw;
-    font-size: 7.9529638484vw;
-    line-height: 9.6370120397vw; }
   main .news .news__item-list {
     margin-bottom: 4.62650602vw; }
   main .news .news__item-frame {
@@ -1043,6 +1175,47 @@ main .additional-items {
     main .additional-items .additional-items__info {
       margin-top: 7.2312289093vw;
       font-size: 6.023710838vw;
-      line-height: 6.9860240902vw; } }
+      line-height: 6.9860240902vw; }
+  main .interview {
+    /* создание в label псевдоэлемента  before со следующими стилями */ }
+    main .interview .interview__title {
+      margin-bottom: 11.0851084239vw; }
+    main .interview .wp-polls-form p strong {
+      font-size: 7.2312289093vw;
+      line-height: 8.4341204745vw; }
+    main .interview .wp-polls-ans a {
+      font-size: 4.3396626468vw;
+      line-height: 5.0613975859vw;
+      margin-top: 5.0613975859vw;
+      margin-bottom: 18.0711325141vw; }
+    main .interview .wp-polls-ul {
+      font-size: 6.023710838vw;
+      line-height: 10.1227951718vw;
+      margin-top: 10.8445301109vw;
+      margin-bottom: 9.8775903527vw; }
+    main .interview .wp-polls-ul li {
+      margin-top: 5.783132525vw; }
+    main .interview .custom-radio + label::before {
+      width: 8.4341204745vw;
+      height: 8.4341204745vw;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border-radius: 50%;
+      margin-right: 5vw;
+      background-color: #02adff;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%; }
+    main .interview .Buttons {
+      width: 61.2040481386vw;
+      height: 18vw;
+      border-radius: 12.0474216761vw;
+      font-size: 4.8208192728vw;
+      padding: 0;
+      line-height: 1vw;
+      background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%); }
+    main .interview .Buttons:hover {
+      background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
+      filter: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -325,7 +325,37 @@
             </div>
         </div>
     </div>
-
+    <div class="interview">
+        <div class="container">
+            <div class="interview__title">
+                Опрос
+            </div>
+            <form id="polls_form_1" class="wp-polls-form" action="/index.php" method="post">
+                <p style="display: none;"><input type="hidden" id="poll_1_nonce" name="wp-polls-nonce"
+                                                 value="685b84c5ed"></p>
+                <p style="display: none;"><input type="hidden" name="poll_id" value="1"></p>
+                <p style="text-align: center"><strong>Довольны ли Вы организацией и качеством питания в школьной
+                    столовой?</strong></p>
+                <div id="polls-1-ans" class="wp-polls-ans">
+                    <ul class="wp-polls-ul">
+                        <li><input class="custom-radio" type="radio" id="poll-answer-1" name="poll_1" value="1"> <label for="poll-answer-1">Да,
+                            очень довольны</label></li>
+                        <li><input class="custom-radio" type="radio" id="poll-answer-2" name="poll_1" value="2"> <label for="poll-answer-2">Оставляет
+                            желать лучшего</label></li>
+                        <li><input class="custom-radio" type="radio" id="poll-answer-3" name="poll_1" value="3"> <label for="poll-answer-3">Нет</label>
+                        </li>
+                        <li><input class="custom-radio" type="radio" id="poll-answer-4" name="poll_1" value="4"> <label for="poll-answer-4">Затрудняюсь
+                            ответить</label></li>
+                    </ul>
+                    <p style="text-align: center"><input type="button" name="vote" value="
+  Проголосовать" class="Buttons" onclick="poll_vote(1);"></p>
+                    <p style="text-align: center"><a href="#ViewPollResults" onclick="poll_result(1); return false;"
+                                                     title="Просмотреть результаты опроса">Просмотреть результаты</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
 </main>
 <footer>
 

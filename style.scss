@@ -275,6 +275,13 @@ header {
   }
 }
 main {
+  .news__title, .interview__title {
+    margin-top: 5.677vw;
+    font-weight: bold;
+    font-size: 1.719vw;
+    line-height: 2.083vw;
+    text-align: center;
+  }
   .slide-wrapper {
     height: 21.615vw;
     margin-top: 2.083vw;
@@ -328,13 +335,7 @@ main {
   }
   .news {
     padding-bottom: 5.677vw;
-    .news__title {
-      margin-top: 5.677vw;
-      font-weight: bold;
-      font-size: 1.719vw;
-      line-height: 2.083vw;
-      text-align: center;
-    }
+
     .news__item-list {
       display: flex;
       justify-content: space-between;
@@ -600,6 +601,116 @@ main {
       color: #FFFFFF;
     }
   }
+  .interview {
+    .interview__title {
+      margin-bottom: 2.396vw;
+    }
+    .wp-polls-form p strong {
+      font-size: 1.563vw;
+      line-height: 1.823vw;
+      font-weight: normal;
+      text-align: center;
+    }
+    .wp-polls-ans {
+      margin: 0 auto;
+      display: block;
+      width: max-content;
+    }
+    .wp-polls-ans a {
+      font-size: 0.938vw;
+      line-height: 1.094vw;
+      margin-top: 1.094vw;
+      margin-bottom: 3.906vw;
+      text-align: center;
+      color: #769498;
+      display: block;
+    }
+    .wp-polls-ul {
+      font-size: 1.302vw;
+      line-height: 2.188vw;
+      margin-top: 2.344vw;
+      margin-bottom: 2.135vw;
+      list-style: none;
+    }
+    .wp-polls-ul li {
+      margin-top: 1.250vw;
+    }
+    /* для элемента input c type="radio" */
+    .custom-radio {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    /* для элемента label связанного с .custom-radio */
+    .custom-radio+label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+    /* создание в label псевдоэлемента  before со следующими стилями */
+    .custom-radio+label::before {
+      content: '';
+      display: inline-block;
+      width: 1.823vw;
+      height: 1.823vw;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border-radius: 50%;
+      margin-right: 2.742vw;
+      background-color: $blue-light;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+    /* стили при наведении курсора на радио */
+    .custom-radio:not(:disabled):not(:checked)+label:hover::before {
+      border-color: $red;
+    }
+    /* стили для активной радиокнопки (при нажатии на неё) */
+    .custom-radio:not(:disabled):active+label::before {
+      background-color: $red;
+      border-color: $red;
+    }
+    /* стили для радиокнопки, находящейся в фокусе */
+    .custom-radio:focus+label::before {
+      box-shadow: 0 0 0 0.2vw $blue;
+    }
+    /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+    .custom-radio:focus:not(:checked)+label::before {
+      border-color: $blue;
+    }
+    /* стили для радиокнопки, находящейся в состоянии checked */
+    .custom-radio:checked+label::before {
+      border-color: $blue;
+      background-color: $blue;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    }
+    /* стили для радиокнопки, находящейся в состоянии disabled */
+    .custom-radio:disabled+label::before {
+      background-color: $red;
+    }
+    .Buttons {
+      margin: 0 auto;
+      padding: 0.2vw 0 0;
+      width: 13.229vw;
+      height: 3.385vw;
+      border: 0;
+      border-radius: 2.604vw;
+      font-size: 1.042vw;
+      line-height: 1.250vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%);
+    }
+    .Buttons:hover {
+      background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
+      filter:drop-shadow(0.260vw 0.260vw 1.042vw rgba(0, 0, 0, 0.51));
+    }
+  }
 }
 @media all and (max-width: 1370px) {
   $coefficient: 1.4;
@@ -613,22 +724,18 @@ main {
     width: $narrow;
     margin: 0 auto;
   }
-
   header {
     .header__back {
       background-image: url("img/header_back_md.jpg");
       background-size: 100vw;
       height: 25vw * $coefficient;
     }
-
-
     /* стилизуем кнопку */
     .menu-btn-left {
       /* центрируем содержимое кнопки */
       width: 2.2vw  * $coefficient;
       height: 2.2vw  * $coefficient;
     }
-
     /* добавляем "гамбургер" */
     .menu-btn-left > span,
     .menu-btn-left > span::before,
@@ -636,16 +743,13 @@ main {
       width: 1.531vw  * $coefficient;
       height: 0.149vw  * $coefficient;
     }
-
     .menu-btn-left > span::before {
       content: '';
       top: 0.5vw  * $coefficient;
     }
-
     .menu-btn-left > span::after {
       top: -0.5vw  * $coefficient;
     }
-
     /* контейнер меню */
     .left-menu {
       top: 4.313vw  * $coefficient;
@@ -654,42 +758,35 @@ main {
       box-shadow: 0.241vw * $coefficient 0 1.446vw * $coefficient rgba(0, 0, 0, .2);
       z-index: 4;
     }
-
     /* элементы меню */
     .left-menu .menu-item-title .title-no-link, .left-menu-link {
       padding: 0.808vw * $coefficient 1.456vw * $coefficient;
       font-size: 1.302vw * $coefficient;
       line-height: 1.510vw * $coefficient;
     }
-
     .submenu-link {
       padding: 0.808vw * $coefficient 2.456vw * $coefficient;
       font-size: 1.042vw * $coefficient;
       line-height: 1.198vw * $coefficient;
     }
-
     #menu-toggle-left:checked ~ .left-menu {
       width: 70vw * $coefficient;
     }
-
     /******* /burger left menu *******/
     .top-menu {
       margin-top: 1.3vw * $coefficient;
     }
-
     .nav-list {
       font-size: 1.042vw * $coefficient;
       line-height: 2.215vw * $coefficient;
       padding-right: 1.042vw * $coefficient;
     }
-
     .header__logo {
       margin-left: 5.781vw * $coefficient;
       margin-top: 1.6vw * $coefficient;
       width: 11.719vw * $coefficient;
       height: 15.677vw * $coefficient;
     }
-
     .header__column {
       width: 49.1vw * $coefficient;
       margin-top: 4.1vw * $coefficient;
@@ -714,6 +811,13 @@ main {
     }
   }
   main {
+    .news__title, .interview__title {
+      margin-top: 5.677vw * $coefficient;
+      font-weight: bold;
+      font-size: 1.719vw * $coefficient;
+      line-height: 2.083vw * $coefficient;
+      text-align: center;
+    }
     .slide-wrapper {
       height: 21.615vw * $coefficient;
       margin-top: 2.083vw * $coefficient;
@@ -743,13 +847,6 @@ main {
       }
     }
     .news {
-      .news__title {
-        margin-top: 5.677vw * $coefficient;
-        font-weight: bold;
-        font-size: 1.719vw * $coefficient;
-        line-height: 2.083vw * $coefficient;
-        text-align: center;
-      }
       .news__item-list {
         display: flex;
         justify-content: space-between;
@@ -953,6 +1050,55 @@ main {
         margin-top: 1.563vw * $coefficient;
         font-size: 1.302vw * $coefficient;
         line-height: 1.510vw * $coefficient;
+      }
+    }
+    .interview {
+      .interview__title {
+        margin-bottom: 2.396vw * $coefficient;
+      }
+      .wp-polls-form p strong {
+        font-size: 1.563vw * $coefficient;
+        line-height: 1.823vw * $coefficient;
+      }
+      .wp-polls-ans a {
+        font-size: 0.938vw * $coefficient;
+        line-height: 1.094vw * $coefficient;
+        margin-top: 1.094vw * $coefficient;
+        margin-bottom: 3.906vw * $coefficient;
+      }
+      .wp-polls-ul {
+        font-size: 1.302vw * $coefficient;
+        line-height: 2.188vw * $coefficient;
+        margin-top: 2.344vw * $coefficient;
+        margin-bottom: 2.135vw * $coefficient;
+      }
+      .wp-polls-ul li {
+        margin-top: 1.250vw * $coefficient;
+      }
+      /* создание в label псевдоэлемента  before со следующими стилями */
+      .custom-radio+label::before {
+        width: 1.823vw * $coefficient;
+        height: 1.823vw * $coefficient;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 50%;
+        margin-right: 2.742vw * $coefficient;
+        background-color: $blue-light;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+      .Buttons {
+        width: 13.229vw * $coefficient;
+        height: 3.385vw * $coefficient;
+        border-radius: 2.604vw * $coefficient;
+        font-size: 1.042vw * $coefficient;
+        line-height: 1.250vw * $coefficient;
+        background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%);
+      }
+      .Buttons:hover {
+        background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
+        filter:drop-shadow(0.260vw 0.260vw 1.042vw rgba(0, 0, 0, 0.51));
       }
     }
   }
@@ -1204,6 +1350,12 @@ main {
     }
   }
   main {
+    .news__title, .interview__title {
+      margin-top: 17vw;
+      margin-bottom: 5vw;
+      font-size: 1.719vw * $coefficient;
+      line-height: 2.083vw * $coefficient;
+    }
     .slide-wrapper {
       margin-top: 9vw;
       .owl-carousel .owl-nav button {
@@ -1216,13 +1368,7 @@ main {
       }
     }
     .news {
-      .news__title {
-        margin-top: 17vw;
-        margin-bottom: 5vw;
-        font-size: 1.719vw * $coefficient;
-        line-height: 2.083vw * $coefficient;
-      }
-      .news__item-list {
+       .news__item-list {
         margin-bottom: 1vw * $coefficient;
       }
       .news__item-frame {
@@ -1395,6 +1541,56 @@ main {
         margin-top: 1.563vw * $coefficient;
         font-size: 1.302vw * $coefficient;
         line-height: 1.510vw * $coefficient;
+      }
+    }
+    .interview {
+      .interview__title {
+        margin-bottom: 2.396vw * $coefficient;
+      }
+      .wp-polls-form p strong {
+        font-size: 1.563vw * $coefficient;
+        line-height: 1.823vw * $coefficient;
+      }
+      .wp-polls-ans a {
+        font-size: 0.938vw * $coefficient;
+        line-height: 1.094vw * $coefficient;
+        margin-top: 1.094vw * $coefficient;
+        margin-bottom: 3.906vw * $coefficient;
+      }
+      .wp-polls-ul {
+        font-size: 1.302vw * $coefficient;
+        line-height: 2.188vw * $coefficient;
+        margin-top: 2.344vw * $coefficient;
+        margin-bottom: 2.135vw * $coefficient;
+      }
+      .wp-polls-ul li {
+        margin-top: 1.250vw * $coefficient;
+      }
+      /* создание в label псевдоэлемента  before со следующими стилями */
+      .custom-radio+label::before {
+        width: 1.823vw * $coefficient;
+        height: 1.823vw * $coefficient;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 50%;
+        margin-right: 5vw;
+        background-color: $blue-light;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+      .Buttons {
+        width: 13.229vw * $coefficient;
+        height: 18vw;
+        border-radius: 2.604vw * $coefficient;
+        font-size: 1.042vw * $coefficient;
+        padding: 0;
+        line-height: 1vw;
+        background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%);
+      }
+      .Buttons:hover {
+        background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
+        filter:none;
       }
     }
   }
