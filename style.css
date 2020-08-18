@@ -536,7 +536,7 @@ main .interview {
     border: 0;
     border-radius: 2.604vw;
     font-size: 1.042vw;
-    line-height: 1.250vw;
+    line-height: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -844,7 +844,7 @@ main .interview {
       height: 4.739vw;
       border-radius: 3.6456vw;
       font-size: 1.4588vw;
-      line-height: 1.75vw;
+      line-height: 0;
       background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%); }
     main .interview .Buttons:hover {
       background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
@@ -1211,8 +1211,7 @@ main .interview {
       height: 18vw;
       border-radius: 12.0474216761vw;
       font-size: 4.8208192728vw;
-      padding: 0;
-      line-height: 1vw;
+      line-height: 0vw;
       background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%); }
     main .interview .Buttons:hover {
       background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);

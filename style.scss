@@ -697,7 +697,7 @@ main {
       border: 0;
       border-radius: 2.604vw;
       font-size: 1.042vw;
-      line-height: 1.250vw;
+      line-height: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1093,7 +1093,7 @@ main {
         height: 3.385vw * $coefficient;
         border-radius: 2.604vw * $coefficient;
         font-size: 1.042vw * $coefficient;
-        line-height: 1.250vw * $coefficient;
+        line-height: 0;
         background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%);
       }
       .Buttons:hover {
@@ -1584,8 +1584,7 @@ main {
         height: 18vw;
         border-radius: 2.604vw * $coefficient;
         font-size: 1.042vw * $coefficient;
-        padding: 0;
-        line-height: 1vw;
+        line-height: 0;
         background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%);
       }
       .Buttons:hover {
