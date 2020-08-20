@@ -1029,7 +1029,7 @@ $narrow: 63.281vw;
 
 header {
   .header__back {
-    background-image: url("img/header_back.jpg");
+    background-image: url("../img/header_back.jpg");
     background-size: 100vw;
     background-repeat: no-repeat;
     height: 25vw;
@@ -1259,7 +1259,7 @@ main {
     margin-top: 2.083vw;
 
     .slide1 {
-      background-image: url("img/bg-slide1.jpg");
+      background-image: url("../img/bg-slide1.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 63.748vw;
@@ -1352,7 +1352,7 @@ main {
       width: 2.344vw;
       height: 10.624vw;
       margin-left: -2.9vw;
-      background-image: url(img/coner.svg);
+      background-image: url(../img/coner.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 3vw;
@@ -1405,7 +1405,7 @@ main {
   }
   .gallery {
     padding: 5.677vw 0;
-    background-image: url("img/gallery__bg.jpg");
+    background-image: url("../img/gallery__bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1532,7 +1532,7 @@ main {
   }
   .additional-items {
     padding: 5.677vw 0 1.677vw;
-    background-image: url("img/gallery__bg.jpg");
+    background-image: url("../img/gallery__bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1800,7 +1800,7 @@ footer {
   }
   header {
     .header__back {
-      background-image: url("img/header_back_md.jpg");
+      background-image: url("../img/header_back_md.jpg");
       background-size: 100vw;
       height: 25vw * $coefficient;
     }
@@ -1895,7 +1895,7 @@ footer {
       margin-top: 2.083vw * $coefficient;
 
       .slide1 {
-        background-image: url("img/bg-slide1.jpg");
+        background-image: url("../img/bg-slide1.jpg");
         background-size: 63.748vw * $coefficient;
         height: 21.615vw * $coefficient;
       }
