@@ -876,16 +876,17 @@ header nav.header__row {
     display: none;
     position: absolute;
     right: 7%;
-    top: 10px;
-    width: 30px;
-    height: 30px;
-    background: url("../../img/list.svg");
+    top: 0.521vw;
+    width: 1.563vw;
+    height: 1.563vw;
+    background: url("/assets/img/burger.svg");
     background-size: contain; }
-    @media (max-width: 730px) {
+    @media (max-width: 415px) {
       header nav.header__row .burger {
         display: block; } }
   header nav.header__row ul.top-menu {
-    height: 100%;
+    height: 2.604vw;
+    margin-top: 1.3vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -894,7 +895,7 @@ header nav.header__row {
     -webkit-flex-direction: row;
     -webkit-justify-content: space-between;
     -webkit-align-items: center; }
-    @media (max-width: 730px) {
+    @media (max-width: 415px) {
       header nav.header__row ul.top-menu {
         flex-direction: column;
         -webkit-flex-direction: column; } }
@@ -906,73 +907,73 @@ header nav.header__row {
         display: table-cell;
         height: 100%;
         vertical-align: middle;
-        padding: 0 15px; }
-        @media (max-width: 730px) {
+        padding: 0 0.781vw;
+        color: #fff;
+        font-size: 1.042vw; }
+        @media (max-width: 415px) {
           header nav.header__row ul.top-menu li a {
             display: block;
             height: auto;
-            padding: 15px; } }
-      header nav.header__row ul.top-menu li:hover {
-        background: #ccc; }
+            padding: 0.781vw; } }
+        header nav.header__row ul.top-menu li a:hover {
+          color: #f0ebeb; }
       header nav.header__row ul.top-menu li:hover ul.sub-menu {
         left: 0;
-        opacity: 1;
-        border-top: 1px dotted #ccc; }
-        @media (max-width: 730px) {
+        opacity: 1; }
+        @media (max-width: 415px) {
           header nav.header__row ul.top-menu li:hover ul.sub-menu {
-            margin-top: -5px;
+            margin-top: -0.260vw;
             display: block; } }
       header nav.header__row ul.top-menu li:hover .arrow {
-        background: url("../../img/up-arrow.svg");
+        background: url("/assets/img/up-arrow.svg");
         background-size: contain; }
       header nav.header__row ul.top-menu li .sub-menu {
+        margin-left: 0;
         display: block;
         left: -5555px;
         opacity: 0;
         position: absolute;
-        top: 42px;
+        top: 2.604vw;
         transition: 0.35s linear opacity;
         -webkit-transition: 0.35s linear opacity; }
         header nav.header__row ul.top-menu li .sub-menu li {
-          border-bottom: 1px solid #ccc;
-          border-left: 1px solid #ccc;
-          border-right: 1px solid #ccc;
-          min-width: 250px;
+          min-width: 13.021vw;
           white-space: nowrap;
-          background: #f1f1f1; }
+          background: #fff; }
           header nav.header__row ul.top-menu li .sub-menu li a {
-            padding: 15px; }
+            padding: 0.781vw;
+            color: #2D87C9; }
           header nav.header__row ul.top-menu li .sub-menu li:hover a {
-            background: #ccc;
-            opacity: 0.85; }
-        @media (max-width: 730px) {
+            background: #2D87C9;
+            color: #fff; }
+        @media (max-width: 415px) {
           header nav.header__row ul.top-menu li .sub-menu {
             position: static;
             left: 0;
             display: none; } }
       header nav.header__row ul.top-menu li .arrow {
         display: inline-block;
-        width: 10px;
-        height: 10px;
+        width: 0.521vw;
+        height: 0.521vw;
         position: absolute;
         right: 44%;
         top: 65%;
-        background: url("../../img/down-arrow.svg");
+        background: url("/assets/img/up-arrow.svg");
         background-size: contain; }
-        @media (max-width: 730px) {
+        @media (max-width: 415px) {
           header nav.header__row ul.top-menu li .arrow {
             right: 50%;
             top: 40%; } }
-      @media (max-width: 730px) {
+      @media (max-width: 415px) {
         header nav.header__row ul.top-menu li {
           display: block;
           height: auto;
           width: 100%; } }
-    @media (max-width: 730px) {
+    @media (max-width: 415px) {
       header nav.header__row ul.top-menu {
         /*display: none;*/
         height: auto; } }
-  @media (max-width: 730px) {
+  @media (max-width: 415px) {
     header nav.header__row {
       height: auto; } }
 header .header__row {

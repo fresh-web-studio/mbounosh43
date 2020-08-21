@@ -1036,14 +1036,12 @@ header {
   }
 
   nav.header__row {
-    // цвет рамок и фона
-    $gray: #ccc;
 
     // высота меню
-    $menuH: 42px;
+    $menuH: 2.604vw;
 
     // переход к мобильной версии
-    $break: 730px;
+    $break: 415px;
 
     // ширина всей страницы с меню
     $width: 100vw;
@@ -1080,17 +1078,18 @@ header {
       display: none;
       position: absolute;
       right: 7%;
-      top: 10px;
-      width: 30px;
-      height: 30px;
-      background: url("../../img/list.svg");
+      top: 0.521vw;
+      width: 1.563vw;
+      height: 1.563vw;
+      background: url("/assets/img/burger.svg");
       background-size: contain;
       @media (max-width: $break) {
         display: block;
       }
     }
     ul.top-menu {
-      height: 100%;
+      height: $menuH;
+      margin-top: 1.3vw;
       @include alignment-by-axes();
       li {
         position: relative;
@@ -1100,29 +1099,32 @@ header {
           display: table-cell;
           height: 100%;
           vertical-align: middle;
-          padding: 0 15px;
+          padding: 0 0.781vw;
+          color: #fff;
+          font-size: 1.042vw;
           @media (max-width: $break) {
             @include auto-block();
-            padding: 15px;
+            padding: 0.781vw;
+          }
+          &:hover {
+            color: #f0ebeb;
           }
         }
-        &:hover {
-          background: $gray;
-        }
+
         &:hover ul.sub-menu {
           left: 0;
           opacity: 1;
-          border-top: 1px dotted $gray;
           @media (max-width: $break) {
-            margin-top: -5px;
+            margin-top: -0.260vw;
             display: block;
           }
         }
         &:hover .arrow {
-          background: url("../../img/up-arrow.svg");
+          background: url("/assets/img/up-arrow.svg");
           background-size: contain;
         }
         .sub-menu {
+          margin-left: 0;
           display: block;
           left: -5555px;
           opacity: 0;
@@ -1131,18 +1133,16 @@ header {
           transition: $delay linear opacity;
           -webkit-transition: $delay linear opacity;
           li {
-            border-bottom: 1px solid $gray;
-            border-left: 1px solid $gray;
-            border-right: 1px solid $gray;
-            min-width: 250px;
+            min-width: 13.021vw;
             white-space: nowrap;
-            background: #f1f1f1;
+            background: #fff;
             a {
-              padding: 15px;
+              padding: 0.781vw;
+              color: $blue;
             }
             &:hover a {
-              background: $gray;
-              opacity: 0.85;
+              background: $blue;
+              color: #fff;
             }
           }
           @media (max-width: $break) {
@@ -1153,12 +1153,12 @@ header {
         }
         .arrow {
           display: inline-block;
-          width: 10px;
-          height: 10px;
+          width: 0.521vw;
+          height: 0.521vw;
           position: absolute;
           right: 44%;
           top: 65%;
-          background: url("../../img/down-arrow.svg");
+          background: url("/assets/img/up-arrow.svg");
           background-size: contain;
           @media (max-width: $break) {
             right: 50%;
