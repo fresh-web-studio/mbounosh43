@@ -51,8 +51,8 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 		register_nav_menus(
 
 			array(
-                'primary' => __( 'top-menu', 'mbounosh43' ),
-                'top' => __( 'left-menu', 'mbounosh43' ),
+                'top-menu' => __( 'top-menu', 'mbounosh43' ),
+                'left-menu' => __( 'left-menu', 'mbounosh43' ),
 			)
 		);
 

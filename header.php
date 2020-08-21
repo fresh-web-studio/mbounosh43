@@ -33,12 +33,19 @@
 	<header id="masthead" class="site-header">
         <div class="header__back">
             <div class="container">
-
-                <?php wp_nav_menu(array(
-                    'theme_location' => 'primary',
-                    'container'       => 'nav',
-                    'container_class' => 'header__row',
-                )); ?>
+                <nav class="header__row">
+                    <input id="menu-toggle" type="checkbox"/>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'top-menu',
+                        'container'       => '',
+                        'container_class' => '',
+                        'menu_class'      => 'top-menu',
+                        'menu_id'         => 'nav',
+                    )); ?>
+                    <label class="menu-btn" for="menu-toggle">
+                        <span></span>
+                    </label>
+                </nav>
 
                 <div class="header__row">
                     <img src="assets/img/logo.svg" alt="Школа радости" class="header__logo">
