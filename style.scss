@@ -1114,10 +1114,20 @@ header {
         &:hover ul.sub-menu {
           left: 0;
           opacity: 1;
+
           @media (max-width: $break) {
             margin-top: -0.260vw;
             display: block;
           }
+        }
+        &:hover ul.sub-menu.left-menu {
+          width: $container;
+          max-height: 42.2vw;
+          display: flex;
+          flex-flow: column;
+          flex-wrap: wrap;
+          background-color: #fff;
+          z-index: 99999;
         }
         &:hover .arrow {
           background: url("/assets/img/up-arrow.svg");
@@ -1133,6 +1143,7 @@ header {
           transition: $delay linear opacity;
           -webkit-transition: $delay linear opacity;
           li {
+            cursor: pointer;
             min-width: 13.021vw;
             white-space: nowrap;
             background: #fff;
@@ -1145,12 +1156,28 @@ header {
               color: #fff;
             }
           }
+          li.menu-item-sutitle {
+            a {
+              padding: 0.781vw 2.456vw;
+            }
+          }
           @media (max-width: $break) {
             position: static;
             left: 0;
             display: none;
           }
         }
+        .sub-menu.left-menu {
+          li {
+            a {
+              width: $container / 2;
+              max-height: 42.2vw;
+              display: block;
+              white-space: initial;
+            }
+          }
+        }
+
         .arrow {
           display: inline-block;
           width: 0.521vw;

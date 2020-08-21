@@ -924,6 +924,14 @@ header nav.header__row {
           header nav.header__row ul.top-menu li:hover ul.sub-menu {
             margin-top: -0.260vw;
             display: block; } }
+      header nav.header__row ul.top-menu li:hover ul.sub-menu.left-menu {
+        width: 69.583vw;
+        max-height: 42.2vw;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        background-color: #fff;
+        z-index: 99999; }
       header nav.header__row ul.top-menu li:hover .arrow {
         background: url("/assets/img/up-arrow.svg");
         background-size: contain; }
@@ -937,6 +945,7 @@ header nav.header__row {
         transition: 0.35s linear opacity;
         -webkit-transition: 0.35s linear opacity; }
         header nav.header__row ul.top-menu li .sub-menu li {
+          cursor: pointer;
           min-width: 13.021vw;
           white-space: nowrap;
           background: #fff; }
@@ -946,11 +955,18 @@ header nav.header__row {
           header nav.header__row ul.top-menu li .sub-menu li:hover a {
             background: #2D87C9;
             color: #fff; }
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-sutitle a {
+          padding: 0.781vw 2.456vw; }
         @media (max-width: 415px) {
           header nav.header__row ul.top-menu li .sub-menu {
             position: static;
             left: 0;
             display: none; } }
+      header nav.header__row ul.top-menu li .sub-menu.left-menu li a {
+        width: 34.7915vw;
+        max-height: 42.2vw;
+        display: block;
+        white-space: initial; }
       header nav.header__row ul.top-menu li .arrow {
         display: inline-block;
         width: 0.521vw;
