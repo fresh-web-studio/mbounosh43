@@ -902,10 +902,10 @@ header nav.header__row {
     header nav.header__row ul.top-menu li {
       position: relative;
       display: table;
-      height: 100%; }
+      height: 100%;
+      cursor: pointer; }
       header nav.header__row ul.top-menu li a {
         display: table-cell;
-        height: 100%;
         vertical-align: middle;
         padding: 0 0.781vw;
         color: #fff;
