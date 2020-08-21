@@ -14,10 +14,15 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,400,300,500,400italic,500italic,700,700italic,100&subset=latin,cyrillic'
+          rel='stylesheet' type='text/css'>
 </head>
 
 <body <?php body_class(); ?>>
@@ -26,6 +31,34 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mbounosh43' ); ?></a>
 
 	<header id="masthead" class="site-header">
+        <div class="header__back">
+            <div class="container">
+
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'container'       => 'nav',
+                    'container_class' => 'header__row',
+                )); ?>
+
+                <div class="header__row">
+                    <img src="assets/img/logo.svg" alt="Школа радости" class="header__logo">
+                    <div class="header__column">
+                        <div class="header__name">
+                            Муниципальное автономное общеобразовательное учреждение начальная общеобразовательная школа №43
+                        </div>
+                        <div class="header__info">
+                            <div class="header__address">622048, обл. Свердловская, г. Нижний Тагил, ул. Зари, д. 30</div>
+                            <div class="header__phone-mail">Телефон: <a href="tel:+73435310408">8 (3435) 31-04-08</a>.
+                                Электронная почта:
+                                <a href="mailto:skhool43@yandex.ru">skhool43@yandex.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -45,15 +78,4 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mbounosh43' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
