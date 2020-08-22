@@ -481,11 +481,6 @@ html {
     margin-bottom: 1.5em;
   }
 
-  ul,
-  ol {
-    margin: 0 0 1.5em 3em;
-  }
-
   ul {
     list-style: disc;
   }
@@ -1014,9 +1009,10 @@ header {
     $width: 100vw;
     // время плавной анимации показа меню
     $delay: 0.35s;
+
     /*
- * — Миксины —
- */
+   * — Миксины —
+   */
     /* flexbox helper */
     @mixin alignment-by-axes() {
       display: flex;
@@ -1045,7 +1041,7 @@ header {
       li.left-menu {
         &:hover ul.sub-menu {
           width: $container;
-          max-height: 42.2vw;
+          max-height: 36.2vw;
           display: flex;
           flex-flow: column;
           flex-wrap: wrap;
@@ -1058,7 +1054,7 @@ header {
           li {
             a {
               width: $container / 2;
-              max-height: 42.2vw;
+              max-height: 36.2vw;
               display: block;
               white-space: initial;
             }
@@ -1113,7 +1109,7 @@ header {
             background: #fff;
             a {
               padding: 0.781vw;
-              font-size: (25 / $factor)+$p;
+              font-size: (19 / $factor)+$p;
               color: $blue;
             }
             &:hover a {
@@ -1124,7 +1120,7 @@ header {
           li.menu-item-subtitle {
             a {
               padding: 0.781vw 1.4vw;
-              font-size: (20 / $factor)+$p;
+              font-size: (18 / $factor)+$p;
               color: $blue;
             }
             &:hover a {
@@ -1158,7 +1154,13 @@ header {
           width: 100%;
         }
       }
-
+      li.menu-item-has-children > a:after {
+        content: "\f107";
+        font-family: "fa-solid-900", serif;
+        color: $red;
+        padding-left: 0.5vw;
+        font-size: initial;
+      }
       li.menu-btn-left > a,
       li.menu-btn-left > a:before,
       li.menu-btn-left > a:after {
@@ -1193,7 +1195,6 @@ header {
       height: auto;
     }
   }
-
   .header__row {
     display: flex;
     justify-content: space-between;
@@ -1862,6 +1863,8 @@ footer {
   $coefficient: 1.4;
   $narrow: 88.946vw;
   $container: 97.804vw;
+  $factor: 13.6518771;
+  $p: vw;
 
   .container {
     width: $container;
@@ -1876,9 +1879,75 @@ footer {
       background-size: 100vw;
       height: 25vw * $coefficient;
     }
+    nav.header__row {
+      // высота меню
+      $menuH: 2.604vw;
+      ul.top-menu {
+        height: $menuH * $coefficient;
+        margin-top: 1.3vw * $coefficient;
+        li.left-menu {
+          &:hover ul.sub-menu {
+            width: $container;
+            max-height: 47.08vw;
+          }
+        }
+        li.left-menu {
+          ul.sub-menu {
+            li {
+              a {
+                width: $container / 2;
+              }
+            }
+          }
+        }
+        li {
+          a {
+            padding: 0 0.781vw * $coefficient;
+            font-size: 1.042vw * $coefficient;
+          }
+          .sub-menu {
+            top: $menuH * $coefficient;
+            li.menu-item-title{
+              min-width: 18.021vw * $coefficient;
+              a {
+                font-size: 1.43vw;
+              }
+            }
+            li.menu-item-subtitle {
+              a {
+                padding: 0.781vw * $coefficient 1.4vw * $coefficient;
+                font-size: 1.4vw;
+              }
+            }
+          }
+          .arrow {
+            width: 0.521vw * $coefficient;
+            height: 0.521vw * $coefficient;
+            position: absolute;
+            right: 44%;
+            top: 65%;
+            background: url("/assets/img/up-arrow.svg");
+            background-size: contain;
+          }
+        }
 
-
-
+        li.menu-btn-left > a,
+        li.menu-btn-left > a:before,
+        li.menu-btn-left > a:after {
+          margin-top: 1vw * $coefficient;
+          height: 0.2vw * $coefficient;
+          width: 1.531vw * $coefficient;
+        }
+        li.menu-btn-left > a:before {
+          top: -0.8vw;
+          height: 0.2vw * $coefficient;
+        }
+        li.menu-btn-left > a:after {
+          top: -0.8vw;
+          height: 0.2vw * $coefficient;
+        }
+      }
+    }
 
     .header__logo {
       margin-left: 5.781vw * $coefficient;
@@ -2366,6 +2435,18 @@ footer {
         li.menu-item:first-child {
           order: 3;
         }
+        li.menu-item.menu-item-has-children > a:after {
+          content: "\f107";
+          padding: 0;
+          background-color: transparent;
+          display: block;
+          font-size: initial;
+        }
+
+        li.menu-item-has-children > a:after {
+          float: right;
+        }
+
         li.menu-btn-left > a,
         li.menu-btn-left > a:before,
         li.menu-btn-left > a:after {

@@ -411,9 +411,6 @@ body {
     border: 0;
     height: 1px;
     margin-bottom: 1.5em; }
-  body ul,
-  body ol {
-    margin: 0 0 1.5em 3em; }
   body ul {
     list-style: disc; }
   body ol {
@@ -722,7 +719,7 @@ header .header__back {
 header nav.header__row {
   /************** Burger menu ***************/
   /************** /Burger menu ***************/
-   /*
+ /*
 * — Миксины —
 */
   /* flexbox helper */
@@ -748,7 +745,7 @@ header nav.header__row {
         -webkit-flex-direction: column; } }
     header nav.header__row ul.top-menu li.left-menu:hover ul.sub-menu {
       width: 69.583vw;
-      max-height: 42.2vw;
+      max-height: 36.2vw;
       display: flex;
       flex-flow: column;
       flex-wrap: wrap;
@@ -756,7 +753,7 @@ header nav.header__row {
       z-index: 99999; }
     header nav.header__row ul.top-menu li.left-menu ul.sub-menu li a {
       width: 34.7915vw;
-      max-height: 42.2vw;
+      max-height: 36.2vw;
       display: block;
       white-space: initial; }
     header nav.header__row ul.top-menu li {
@@ -803,14 +800,14 @@ header nav.header__row {
           background: #fff; }
           header nav.header__row ul.top-menu li .sub-menu li.menu-item-title a {
             padding: 0.781vw;
-            font-size: 1.3025000044vw;
+            font-size: 0.9899000034vw;
             color: #2D87C9; }
           header nav.header__row ul.top-menu li .sub-menu li.menu-item-title:hover a {
             background: #2D87C9;
             color: #fff; }
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle a {
           padding: 0.781vw 1.4vw;
-          font-size: 1.0420000036vw;
+          font-size: 0.9378000032vw;
           color: #2D87C9; }
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover a {
           background: #2D87C9;
@@ -838,6 +835,12 @@ header nav.header__row {
           display: block;
           height: auto;
           width: 100%; } }
+    header nav.header__row ul.top-menu li.menu-item-has-children > a:after {
+      content: "\f107";
+      font-family: "fa-solid-900", serif;
+      color: #DC2C16;
+      padding-left: 0.5vw;
+      font-size: initial; }
     header nav.header__row ul.top-menu li.menu-btn-left > a,
     header nav.header__row ul.top-menu li.menu-btn-left > a:before,
     header nav.header__row ul.top-menu li.menu-btn-left > a:after {
@@ -1344,6 +1347,46 @@ footer {
     background-image: url("assets/img/header_back_md.jpg");
     background-size: 100vw;
     height: 35vw; }
+  header nav.header__row ul.top-menu {
+    height: 3.6456vw;
+    margin-top: 1.82vw; }
+    header nav.header__row ul.top-menu li.left-menu:hover ul.sub-menu {
+      width: 97.804vw;
+      max-height: 47.08vw; }
+    header nav.header__row ul.top-menu li.left-menu ul.sub-menu li a {
+      width: 48.902vw; }
+    header nav.header__row ul.top-menu li a {
+      padding: 0 1.0934vw;
+      font-size: 1.4588vw; }
+    header nav.header__row ul.top-menu li .sub-menu {
+      top: 3.6456vw; }
+      header nav.header__row ul.top-menu li .sub-menu li.menu-item-title {
+        min-width: 25.2294vw; }
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title a {
+          font-size: 1.43vw; }
+      header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle a {
+        padding: 1.0934vw 1.96vw;
+        font-size: 1.4vw; }
+    header nav.header__row ul.top-menu li .arrow {
+      width: 0.7294vw;
+      height: 0.7294vw;
+      position: absolute;
+      right: 44%;
+      top: 65%;
+      background: url("/assets/img/up-arrow.svg");
+      background-size: contain; }
+    header nav.header__row ul.top-menu li.menu-btn-left > a,
+    header nav.header__row ul.top-menu li.menu-btn-left > a:before,
+    header nav.header__row ul.top-menu li.menu-btn-left > a:after {
+      margin-top: 1.4vw;
+      height: 0.28vw;
+      width: 2.1434vw; }
+    header nav.header__row ul.top-menu li.menu-btn-left > a:before {
+      top: -0.8vw;
+      height: 0.28vw; }
+    header nav.header__row ul.top-menu li.menu-btn-left > a:after {
+      top: -0.8vw;
+      height: 0.28vw; }
   header .header__logo {
     margin-left: 8.0934vw;
     margin-top: 2.24vw;
@@ -1670,6 +1713,14 @@ footer {
         color: #fff; }
       header nav.header__row ul.top-menu li.menu-item:first-child {
         order: 3; }
+      header nav.header__row ul.top-menu li.menu-item.menu-item-has-children > a:after {
+        content: "\f107";
+        padding: 0;
+        background-color: transparent;
+        display: block;
+        font-size: initial; }
+      header nav.header__row ul.top-menu li.menu-item-has-children > a:after {
+        float: right; }
       header nav.header__row ul.top-menu li.menu-btn-left > a,
       header nav.header__row ul.top-menu li.menu-btn-left > a:before,
       header nav.header__row ul.top-menu li.menu-btn-left > a:after {
