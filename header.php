@@ -34,7 +34,6 @@
         <div class="header__back">
             <div class="container">
                 <nav class="header__row">
-                    <input id="menu-toggle" type="checkbox"/>
                     <?php wp_nav_menu(array(
                         'theme_location' => 'top-menu',
                         'container'       => '',
@@ -42,9 +41,6 @@
                         'menu_class'      => 'top-menu',
                         'menu_id'         => 'nav',
                     )); ?>
-                    <label class="menu-btn" for="menu-toggle">
-                        <span></span>
-                    </label>
                 </nav>
 
                 <div class="header__row">

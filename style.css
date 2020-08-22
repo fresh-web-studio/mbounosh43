@@ -3,7 +3,7 @@
 Theme Name: mbounosh43
 Theme URI: http://underscores.me/
 Author: Andrey Kolchanov
-Author URI: http://fresh.ru
+Author URI: http://freshw.ru
 Description: Description
 Version: 1.0.0
 Tested up to: 5.4
@@ -120,8 +120,7 @@ a {
  */
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted; }
+  text-decoration: underline; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -612,9 +611,9 @@ textarea {
   .main-navigation ul {
     display: flex; } }
 .site-main .comment-navigation,
-.site-main
+.site-main,
 .posts-navigation,
-.site-main
+.site-main,
 .post-navigation {
   margin: 0 0 1.5em; }
 
@@ -659,9 +658,6 @@ textarea {
 --------------------------------------------- */
 .comment-content a {
   word-wrap: break-word; }
-
-.bypostauthor {
-  display: block; }
 
 /* Widgets
 --------------------------------------------- */
@@ -746,15 +742,6 @@ textarea {
 --------------------------------------------------------------*/
 /* Jetpack infinite scroll
 --------------------------------------------- */
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  display: none; }
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-  display: block; }
-
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -798,27 +785,6 @@ textarea {
 
 /* Alignments
 --------------------------------------------- */
-.alignleft {
-  /*rtl:ignore*/
-  float: left;
-  /*rtl:ignore*/
-  margin-right: 1.5em;
-  margin-bottom: 1.5em; }
-
-.alignright {
-  /*rtl:ignore*/
-  float: right;
-  /*rtl:ignore*/
-  margin-left: 1.5em;
-  margin-bottom: 1.5em; }
-
-.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em; }
-
 @font-face {
   font-family: "fa-solid-900";
   src: url("fa-solid-900.ttf"); }
@@ -869,21 +835,8 @@ header nav.header__row {
    /*
 * — Миксины —
 */
-  /* флексбокс хэлпер */
+  /* flexbox helper */
   /* сменяем формат отображения при переходе к мобильной версии */ }
-  header nav.header__row .burger {
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    right: 7%;
-    top: 0.521vw;
-    width: 1.563vw;
-    height: 1.563vw;
-    background: url("/assets/img/burger.svg");
-    background-size: contain; }
-    @media (max-width: 415px) {
-      header nav.header__row .burger {
-        display: block; } }
   header nav.header__row ul.top-menu {
     height: 2.604vw;
     margin-top: 1.3vw;
@@ -899,6 +852,19 @@ header nav.header__row {
       header nav.header__row ul.top-menu {
         flex-direction: column;
         -webkit-flex-direction: column; } }
+    header nav.header__row ul.top-menu li.left-menu:hover ul.sub-menu {
+      width: 69.583vw;
+      max-height: 42.2vw;
+      display: flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      background-color: #fff;
+      z-index: 99999; }
+    header nav.header__row ul.top-menu li.left-menu ul.sub-menu li a {
+      width: 34.7915vw;
+      max-height: 42.2vw;
+      display: block;
+      white-space: initial; }
     header nav.header__row ul.top-menu li {
       position: relative;
       display: table;
@@ -924,14 +890,6 @@ header nav.header__row {
           header nav.header__row ul.top-menu li:hover ul.sub-menu {
             margin-top: -0.260vw;
             display: block; } }
-      header nav.header__row ul.top-menu li:hover ul.sub-menu.left-menu {
-        width: 69.583vw;
-        max-height: 42.2vw;
-        display: flex;
-        flex-flow: column;
-        flex-wrap: wrap;
-        background-color: #fff;
-        z-index: 99999; }
       header nav.header__row ul.top-menu li:hover .arrow {
         background: url("/assets/img/up-arrow.svg");
         background-size: contain; }
@@ -944,29 +902,30 @@ header nav.header__row {
         top: 2.604vw;
         transition: 0.35s linear opacity;
         -webkit-transition: 0.35s linear opacity; }
-        header nav.header__row ul.top-menu li .sub-menu li {
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title {
           cursor: pointer;
-          min-width: 13.021vw;
-          white-space: nowrap;
+          min-width: 18.021vw;
+          white-space: normal;
           background: #fff; }
-          header nav.header__row ul.top-menu li .sub-menu li a {
+          header nav.header__row ul.top-menu li .sub-menu li.menu-item-title a {
             padding: 0.781vw;
+            font-size: 1.3025000044vw;
             color: #2D87C9; }
-          header nav.header__row ul.top-menu li .sub-menu li:hover a {
+          header nav.header__row ul.top-menu li .sub-menu li.menu-item-title:hover a {
             background: #2D87C9;
             color: #fff; }
-        header nav.header__row ul.top-menu li .sub-menu li.menu-item-sutitle a {
-          padding: 0.781vw 2.456vw; }
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle a {
+          padding: 0.781vw 1.4vw;
+          font-size: 1.0420000036vw;
+          color: #2D87C9; }
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover a {
+          background: #2D87C9;
+          color: #fff; }
         @media (max-width: 415px) {
           header nav.header__row ul.top-menu li .sub-menu {
             position: static;
             left: 0;
             display: none; } }
-      header nav.header__row ul.top-menu li .sub-menu.left-menu li a {
-        width: 34.7915vw;
-        max-height: 42.2vw;
-        display: block;
-        white-space: initial; }
       header nav.header__row ul.top-menu li .arrow {
         display: inline-block;
         width: 0.521vw;
@@ -985,6 +944,27 @@ header nav.header__row {
           display: block;
           height: auto;
           width: 100%; } }
+    header nav.header__row ul.top-menu li.menu-btn-left > a,
+    header nav.header__row ul.top-menu li.menu-btn-left > a:before,
+    header nav.header__row ul.top-menu li.menu-btn-left > a:after {
+      font-size: 0;
+      margin-top: 1vw;
+      height: 0.2vw;
+      width: 1.531vw;
+      padding: 0;
+      display: block;
+      position: relative;
+      background-color: #fff; }
+    header nav.header__row ul.top-menu li.menu-btn-left > a:before {
+      top: -0.5vw;
+      content: "";
+      margin-top: 0;
+      height: 0.149vw; }
+    header nav.header__row ul.top-menu li.menu-btn-left > a:after {
+      top: 0.4vw;
+      content: "";
+      margin-top: 0;
+      height: 0.149vw; }
     @media (max-width: 415px) {
       header nav.header__row ul.top-menu {
         /*display: none;*/
@@ -1293,11 +1273,11 @@ main .interview {
   /* для элемента label связанного с .custom-radio */
   /* создание в label псевдоэлемента  before со следующими стилями */
   /* стили при наведении курсора на радио */
-  /* стили для активной радиокнопки (при нажатии на неё) */
-  /* стили для радиокнопки, находящейся в фокусе */
-  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-  /* стили для радиокнопки, находящейся в состоянии checked */
-  /* стили для радиокнопки, находящейся в состоянии disabled */ }
+  /* стили для активной радио кнопки (при нажатии на неё) */
+  /* стили для радио кнопки, находящейся в фокусе */
+  /* стили для радио кнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  /* стили для радио кнопки, находящейся в состоянии checked */
+  /* стили для радио кнопки, находящейся в состоянии disabled */ }
   main .interview .interview__title {
     margin-bottom: 2.396vw; }
   main .interview .wp-polls-form p strong {

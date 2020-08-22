@@ -2,7 +2,7 @@
 Theme Name: mbounosh43
 Theme URI: http://underscores.me/
 Author: Andrey Kolchanov
-Author URI: http://fresh.ru
+Author URI: http://freshw.ru
 Description: Description
 Version: 1.0.0
 Tested up to: 5.4
@@ -136,7 +136,6 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
 }
 
 /**
@@ -715,9 +714,9 @@ textarea {
 }
 
 .site-main .comment-navigation,
-.site-main
+.site-main,
 .posts-navigation,
-.site-main
+.site-main,
 .post-navigation {
   margin: 0 0 1.5em;
 }
@@ -773,9 +772,6 @@ textarea {
   word-wrap: break-word;
 }
 
-.bypostauthor {
-  display: block;
-}
 
 /* Widgets
 --------------------------------------------- */
@@ -881,16 +877,7 @@ textarea {
 /* Jetpack infinite scroll
 --------------------------------------------- */
 
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  display: none;
-}
 
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
 
 /*--------------------------------------------------------------
 # Utilities
@@ -940,34 +927,6 @@ textarea {
 
 /* Alignments
 --------------------------------------------- */
-.alignleft {
-
-  /*rtl:ignore*/
-  float: left;
-
-  /*rtl:ignore*/
-  margin-right: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-.alignright {
-
-  /*rtl:ignore*/
-  float: right;
-
-  /*rtl:ignore*/
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em;
-}
-
 
 @font-face {
   font-family: "fa-solid-900";
@@ -1016,6 +975,8 @@ $red: #DC2C16;
 
 $container: 69.583vw;
 $narrow: 63.281vw;
+$factor: 19.1938579;
+$p: vw;
 
 .container {
   width: $container;
@@ -1052,7 +1013,7 @@ header {
     /*
  * — Миксины —
  */
-    /* флексбокс хэлпер */
+    /* flexbox helper */
     @mixin alignment-by-axes() {
       display: flex;
       flex-direction: row;
@@ -1073,24 +1034,33 @@ header {
       display: block;
       height: auto;
     }
-    .burger {
-      cursor: pointer;
-      display: none;
-      position: absolute;
-      right: 7%;
-      top: 0.521vw;
-      width: 1.563vw;
-      height: 1.563vw;
-      background: url("/assets/img/burger.svg");
-      background-size: contain;
-      @media (max-width: $break) {
-        display: block;
-      }
-    }
     ul.top-menu {
       height: $menuH;
       margin-top: 1.3vw;
       @include alignment-by-axes();
+      li.left-menu {
+        &:hover ul.sub-menu {
+          width: $container;
+          max-height: 42.2vw;
+          display: flex;
+          flex-flow: column;
+          flex-wrap: wrap;
+          background-color: #fff;
+          z-index: 99999;
+        }
+      }
+      li.left-menu {
+        ul.sub-menu {
+          li {
+            a {
+              width: $container / 2;
+              max-height: 42.2vw;
+              display: block;
+              white-space: initial;
+            }
+          }
+        }
+      }
       li {
         position: relative;
         display: table;
@@ -1110,7 +1080,6 @@ header {
             color: #f0ebeb;
           }
         }
-
         &:hover ul.sub-menu {
           left: 0;
           opacity: 1;
@@ -1119,15 +1088,6 @@ header {
             margin-top: -0.260vw;
             display: block;
           }
-        }
-        &:hover ul.sub-menu.left-menu {
-          width: $container;
-          max-height: 42.2vw;
-          display: flex;
-          flex-flow: column;
-          flex-wrap: wrap;
-          background-color: #fff;
-          z-index: 99999;
         }
         &:hover .arrow {
           background: url("/assets/img/up-arrow.svg");
@@ -1142,13 +1102,14 @@ header {
           top: $menuH;
           transition: $delay linear opacity;
           -webkit-transition: $delay linear opacity;
-          li {
+          li.menu-item-title{
             cursor: pointer;
-            min-width: 13.021vw;
-            white-space: nowrap;
+            min-width: 18.021vw;
+            white-space: normal;
             background: #fff;
             a {
               padding: 0.781vw;
+              font-size: (25 / $factor)+$p;
               color: $blue;
             }
             &:hover a {
@@ -1156,25 +1117,21 @@ header {
               color: #fff;
             }
           }
-          li.menu-item-sutitle {
+          li.menu-item-subtitle {
             a {
-              padding: 0.781vw 2.456vw;
+              padding: 0.781vw 1.4vw;
+              font-size: (20 / $factor)+$p;
+              color: $blue;
+            }
+            &:hover a {
+              background: $blue;
+              color: #fff;
             }
           }
           @media (max-width: $break) {
             position: static;
             left: 0;
             display: none;
-          }
-        }
-        .sub-menu.left-menu {
-          li {
-            a {
-              width: $container / 2;
-              max-height: 42.2vw;
-              display: block;
-              white-space: initial;
-            }
           }
         }
 
@@ -1197,6 +1154,32 @@ header {
           width: 100%;
         }
       }
+
+      li.menu-btn-left > a,
+      li.menu-btn-left > a:before,
+      li.menu-btn-left > a:after {
+        font-size: 0;
+        margin-top: 1vw;
+        height: 0.2vw;
+        width: 1.531vw;
+        padding: 0;
+        display: block;
+        position: relative;
+        background-color: #fff;
+      }
+      li.menu-btn-left > a:before {
+        top: -0.5vw;
+        content:"";
+        margin-top: 0;
+        height: 0.149vw;
+      }
+      li.menu-btn-left > a:after {
+        top: 0.4vw;
+        content:"";
+        margin-top: 0;
+        height: 0.149vw;
+      }
+
       @media (max-width: $break) {
         /*display: none;*/
         height: auto;
@@ -1703,30 +1686,30 @@ main {
       border-color: $red;
     }
 
-    /* стили для активной радиокнопки (при нажатии на неё) */
+    /* стили для активной радио кнопки (при нажатии на неё) */
     .custom-radio:not(:disabled):active + label::before {
       background-color: $red;
       border-color: $red;
     }
 
-    /* стили для радиокнопки, находящейся в фокусе */
+    /* стили для радио кнопки, находящейся в фокусе */
     .custom-radio:focus + label::before {
       box-shadow: 0 0 0 0.2vw $red;
     }
 
-    /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+    /* стили для радио кнопки, находящейся в фокусе и не находящейся в состоянии checked */
     .custom-radio:focus:not(:checked) + label::before {
       border-color: $red;
     }
 
-    /* стили для радиокнопки, находящейся в состоянии checked */
+    /* стили для радио кнопки, находящейся в состоянии checked */
     .custom-radio:checked + label::before {
       border-color: $red;
       background-color: $red;
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
     }
 
-    /* стили для радиокнопки, находящейся в состоянии disabled */
+    /* стили для радио кнопки, находящейся в состоянии disabled */
     .custom-radio:disabled + label::before {
       background-color: $red;
     }
