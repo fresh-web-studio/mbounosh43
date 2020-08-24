@@ -1388,7 +1388,7 @@ main {
 
     .news__img img {
       height: 100%;
-      width: 100%;
+      width: auto;
     }
 
     .news__info {
@@ -2676,7 +2676,7 @@ footer {
 
       .news__info {
         width: 11vw * $coefficient;
-        padding: 0 0.60vw * $coefficient;
+        padding: 0 2.9vw;
       }
 
       .news__info:before {

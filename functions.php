@@ -46,10 +46,10 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		/*//Добавляю свои миниатюры для Новостей на глвной странице
+		//Добавляю свои миниатюры для Новостей на глвной странице
         add_image_size(
-            'news-thomb', 1000, 667, true
-        );*/
+            'news-thumb', 300, 300, true
+        );
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 
@@ -59,11 +59,33 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 
 			)
 		);
+        // удаляет H2 из шаблона пагинации
+        add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+                function my_navigation_template( $template, $class ){
+                    /*
+                    Вид базового шаблона:
+                    <nav class="navigation %1$s" role="navigation">
+                        <h2 class="screen-reader-text">%2$s</h2>
+                        <div class="nav-links">%3$s</div>
+                    </nav>
+                    */
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
+                    return '
+            <nav class="navigation %1$s" role="navigation">
+                <div class="nav-links">%3$s</div>
+            </nav>    
+            ';
+                }
+
+        // выводим пагинацию
+                the_posts_pagination( array(
+                    'end_size' => 2,
+                ) );
+
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
 		add_theme_support(
 			'html5',
 			array(

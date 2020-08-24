@@ -20,24 +20,38 @@ get_header();
             <div class="news">
                 <div class="news__title">Новости</div>
                 <div class="news__item-list">
-                    <?php if(have_posts()) {
-                        while (have_posts()) {
-                            the_post(); ?>
-                            <a href="<?php the_permalink(); ?>" class="news__item-frame">
-                                <div class="news__item">
-                                    <div class="news__img">
-                                        <?php the_post_thumbnail ('thumbnail')?>
-                                    </div>
-                                    <div class="news__info">
-                                        <div class="news__item-title"><?php the_title(); ?></div>
-                                        <div class="news_date"><?php the_time('F jS, Y') ?></div>
-                                    </div>
+
+                    <?php
+                    // параметры по умолчанию
+                    $args = array(
+                        'numberposts' => 6,
+                        'post_type'   => 'post',
+                        'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                    ) ;
+
+                    $posts = get_posts( $args );
+
+                    foreach( $posts as $post ){
+                        setup_postdata($post);
+                        ?>
+                        <a href="<?php the_permalink(); ?>" class="news__item-frame">
+                            <div class="news__item">
+                                <div class="news__img">
+                                    <?php the_post_thumbnail ('news-thumb')?>
                                 </div>
-                            </a>
-                            <?php
-                        } //конец while
-                    }//конец if
+                                <div class="news__info">
+                                    <div class="news__item-title"><?php the_title(); ?></div>
+                                    <div class="news_date"><?php the_time('F jS, Y') ?></div>
+                                </div>
+                            </div>
+                        </a>
+                        <?php
+                    }
+
+                    wp_reset_postdata(); // сброс
+
                     ?>
+
                 </div>
                 <a href="category/novosti" class="news__more">Еще новости</a>
             </div>

@@ -26,7 +26,7 @@ get_header();
                             <a href="<?php the_permalink(); ?>" class="news__item-frame">
                                 <div class="news__item">
                                     <div class="news__img">
-                                        <?php the_post_thumbnail ('thumbnail')?>
+                                        <?php the_post_thumbnail ('news-thumb')?>
                                     </div>
                                     <div class="news__info">
                                         <div class="news__item-title"><?php the_title(); ?></div>
@@ -34,20 +34,9 @@ get_header();
                                     </div>
                                 </div>
                             </a>
-                        <?php
-                        } //конец while
-                        ?>
+                        <?php  } //конец while ?>
                         <?php the_posts_pagination(); ?>
-                        <!--<nav class="news__pagination">
-                            <ul>
-                                <li>
-
-                                </li>
-                            </ul>
-                        </nav>-->
-                    <?php
-                    }//конец if
-                    ?>
+                    <?php }//конец if ?>
                 </div>
             </div>
         </div>

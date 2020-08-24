@@ -1008,7 +1008,7 @@ main .news {
     border-bottom-left-radius: 0.521vw; }
   main .news .news__img img {
     height: 100%;
-    width: 100%; }
+    width: auto; }
   main .news .news__info {
     width: 11vw;
     padding: 0 0.60vw;
@@ -1882,7 +1882,7 @@ footer {
       border-bottom-left-radius: 2.4104096364vw; }
     main .news .news__info {
       width: 50.89156622vw;
-      padding: 0 2.775903612vw; }
+      padding: 0 2.9vw; }
     main .news .news__info:before {
       width: 10.8445301109vw;
       height: 49.1519999565vw;
