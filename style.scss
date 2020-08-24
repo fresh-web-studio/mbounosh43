@@ -1271,6 +1271,30 @@ main {
     line-height: 2.083vw;
     text-align: center;
   }
+  .pagination {
+    margin: 0 auto;
+    padding-top: 1vw;
+    .page-numbers {
+      padding: 0.260vw 0.417vw 0.156vw;
+      border-radius: 0.677vw;
+      color: #fff;
+    }
+    a.page-numbers:hover {
+      background-color: $red;
+    }
+    a.page-numbers {
+      background-color: $blue;
+    }
+    a.next, a.prev {
+      padding: 0.260vw 0.781vw 0.156vw;
+    }
+    span.page-numbers.current {
+      background-color: $red;
+    }
+    span.page-numbers.dots {
+      background-color: $blue;
+    }
+  }
 
   .slide-wrapper {
     height: 21.615vw;
@@ -1364,6 +1388,7 @@ main {
 
     .news__img img {
       height: 100%;
+      width: 100%;
     }
 
     .news__info {
@@ -1431,7 +1456,6 @@ main {
       background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
       box-shadow: 0.260vw 0.260vw 1.042vw rgba(0, 0, 0, 0.51);
     }
-
   }
 
   .gallery {
@@ -2006,6 +2030,16 @@ footer {
     }
   }
   main {
+    .pagination {
+      padding-top: 1vw * $coefficient;
+      .page-numbers {
+        padding: 0.260vw * $coefficient 0.417vw * $coefficient 0.156vw * $coefficient;
+        border-radius: 0.677vw * $coefficient;
+      }
+      a.next, a.prev {
+        padding: 0.260vw * $coefficient 0.781vw * $coefficient 0.156vw * $coefficient;
+      }
+    }
     .news__title, .interview__title {
       margin-top: 5.677vw * $coefficient;
       font-size: 1.719vw * $coefficient;
@@ -2105,7 +2139,6 @@ footer {
         background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
         box-shadow: 0.260vw * $coefficient 0.260vw * $coefficient 1.042vw * $coefficient rgba(0, 0, 0, 0.51);
       }
-
     }
 
     .gallery {
@@ -2435,7 +2468,6 @@ footer {
         background-color: #ffffff;
         box-shadow: 0.241vw 0 1.446vw rgba(0, 0, 0, .2);
         z-index: 4;
-
         li.menu-item {
           padding: 0;
           line-height: 1.4;
@@ -2584,6 +2616,16 @@ footer {
     }
   }
   main {
+    .pagination {
+      padding-top: 1vw * $coefficient;
+      .page-numbers {
+        padding: 0.260vw * $coefficient 0.417vw * $coefficient 0.156vw * $coefficient;
+        border-radius: 0.677vw * $coefficient;
+      }
+      a.next, a.prev {
+        padding: 0.260vw * $coefficient 0.781vw * $coefficient 0.156vw * $coefficient;
+      }
+    }
     .news__title, .interview__title {
       margin-top: 17vw;
       margin-bottom: 5vw;
@@ -2621,9 +2663,9 @@ footer {
         box-shadow: none;
       }
 
-      .news__item-frame:nth-child(n+4) {
+/*      .news__item-frame:nth-child(n+4) {
         display: none;
-      }
+      }*/
 
       .news__img {
         width: 9vw * $coefficient;
@@ -2663,10 +2705,6 @@ footer {
         border-radius: 2.604vw * $coefficient;
         font-size: 1.042vw * $coefficient;
         line-height: 1.250vw * $coefficient;
-      }
-
-      .news__more:hover {
-        box-shadow: none;
       }
     }
 

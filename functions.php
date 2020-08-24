@@ -46,13 +46,17 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-
+		/*//Добавляю свои миниатюры для Новостей на глвной странице
+        add_image_size(
+            'news-thomb', 1000, 667, true
+        );*/
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 
 			array(
                 'top-menu' => __( 'top-menu', 'mbounosh43' ),
                 'left-menu' => __( 'left-menu', 'mbounosh43' ),
+
 			)
 		);
 
@@ -70,7 +74,7 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 				'caption',
 				'style',
 				'script',
-			)
+    )
 		);
 
 		// Set up the WordPress core custom background feature.
@@ -147,9 +151,9 @@ function mbounosh43_scripts() {
 	wp_enqueue_style( 'mbounosh43-style-owl.theme.default', get_stylesheet_uri() . 'owlcarousel/assets/owl.theme.default.css' );
 	wp_style_add_data( 'mbounosh43-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'mbounosh43-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-    wp_enqueue_script('jquery');
-	//wp_enqueue_script( 'mbounosh43-jquery', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'mbounosh43-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    //wp_enqueue_script('jquery');
+	wp_enqueue_script( 'mbounosh43-jquery', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'mbounosh43-owl.carousel', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'mbounosh43-main_slider', get_template_directory_uri() . '/assets/js/main_slider.js', array(), _S_VERSION, true );
 

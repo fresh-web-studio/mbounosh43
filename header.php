@@ -48,7 +48,9 @@
                 </nav>
 
                 <div class="header__row">
-                    <img src="assets/img/logo.svg" alt="Школа радости" class="header__logo">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                        <img src="assets/img/logo.svg" alt="Школа радости" class="header__logo">
+                    </a>
                     <div class="header__column">
                         <div class="header__name">
                             Муниципальное автономное общеобразовательное учреждение начальная общеобразовательная школа №43
@@ -65,24 +67,4 @@
 
             </div>
         </div>
-
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$mbounosh43_description = get_bloginfo( 'description', 'display' );
-			if ( $mbounosh43_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $mbounosh43_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
 	</header><!-- #masthead -->
