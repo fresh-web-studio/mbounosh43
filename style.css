@@ -23,6 +23,10 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 body {
+  /**
+   * Remove the margin in all browsers.
+   */
+  margin: 0;
   /*--------------------------------------------------------------
   >>> TABLE OF CONTENTS:
   ----------------------------------------------------------------
@@ -64,9 +68,6 @@ body {
    */
   /* Sections
        ========================================================================== */
-  /**
-   * Remove the margin in all browsers.
-   */
   /**
    * Render the `main` element consistently in IE.
    */
@@ -239,8 +240,6 @@ body {
   body html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%; }
-  body body {
-    margin: 0; }
   body main {
     display: block; }
   body h1 {
@@ -756,6 +755,11 @@ header nav.header__row {
       max-height: 36.2vw;
       display: block;
       white-space: initial; }
+    header nav.header__row ul.top-menu li.current_page_item > a,
+    header nav.header__row ul.top-menu li.current-menu-ancestor > a,
+    header nav.header__row ul.top-menu li.current-menu-item > a,
+    header nav.header__row ul.top-menu li.current-menu-parent > a {
+      color: #DC2C16; }
     header nav.header__row ul.top-menu li {
       position: relative;
       display: table;
@@ -793,6 +797,15 @@ header nav.header__row {
         top: 2.604vw;
         transition: 0.35s linear opacity;
         -webkit-transition: 0.35s linear opacity; }
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title.current_page_item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title.current-menu-ancestor > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title.current-menu-item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title.current-menu-parent > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title:hover.current_page_item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title:hover.current-menu-ancestor > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title:hover.current-menu-item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-title:hover.current-menu-parent > a {
+          color: #DC2C16; }
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-title {
           cursor: pointer;
           min-width: 18.021vw;
@@ -805,6 +818,15 @@ header nav.header__row {
           header nav.header__row ul.top-menu li .sub-menu li.menu-item-title:hover a {
             background: #2D87C9;
             color: #fff; }
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle.current_page_item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle.current-menu-ancestor > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle.current-menu-item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle.current-menu-parent > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current_page_item > a
+        li.menu-item-subtitle:hover.current-menu-ancestor > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current-menu-item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current-menu-parent > a {
+          color: #DC2C16; }
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle a {
           padding: 0.781vw 1.4vw;
           font-size: 0.9378000032vw;

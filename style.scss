@@ -22,6 +22,10 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 body {
+  /**
+   * Remove the margin in all browsers.
+   */
+  margin: 0;
   /*--------------------------------------------------------------
   >>> TABLE OF CONTENTS:
   ----------------------------------------------------------------
@@ -74,12 +78,7 @@ html {
   /* Sections
        ========================================================================== */
 
-  /**
-   * Remove the margin in all browsers.
-   */
-  body {
-    margin: 0;
-  }
+
 
   /**
    * Render the `main` element consistently in IE.
@@ -992,6 +991,7 @@ header {
     height: 25vw;
   }
   nav.header__row {
+
     /************** Burger menu ***************/
     #menu-toggle {
       display: none;
@@ -1061,6 +1061,12 @@ header {
           }
         }
       }
+      li.current_page_item > a,
+      li.current-menu-ancestor > a,
+      li.current-menu-item > a,
+      li.current-menu-parent > a {
+        color: $red;
+      }
       li {
         position: relative;
         display: table;
@@ -1102,6 +1108,16 @@ header {
           top: $menuH;
           transition: $delay linear opacity;
           -webkit-transition: $delay linear opacity;
+          li.menu-item-title.current_page_item > a,
+          li.menu-item-title.current-menu-ancestor > a,
+          li.menu-item-title.current-menu-item > a,
+          li.menu-item-title.current-menu-parent > a,
+          li.menu-item-title:hover.current_page_item > a,
+          li.menu-item-title:hover.current-menu-ancestor > a,
+          li.menu-item-title:hover.current-menu-item > a,
+          li.menu-item-title:hover.current-menu-parent > a{
+            color: $red;
+          }
           li.menu-item-title{
             cursor: pointer;
             min-width: 18.021vw;
@@ -1116,6 +1132,16 @@ header {
               background: $blue;
               color: #fff;
             }
+          }
+          li.menu-item-subtitle.current_page_item > a,
+          li.menu-item-subtitle.current-menu-ancestor > a,
+          li.menu-item-subtitle.current-menu-item > a,
+          li.menu-item-subtitle.current-menu-parent > a,
+          li.menu-item-subtitle:hover.current_page_item > a
+          li.menu-item-subtitle:hover.current-menu-ancestor > a,
+          li.menu-item-subtitle:hover.current-menu-item > a,
+          li.menu-item-subtitle:hover.current-menu-parent > a{
+            color: $red;
           }
           li.menu-item-subtitle {
             a {
