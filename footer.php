@@ -11,7 +11,7 @@
 
 ?>
 
-<footer>
+<footer class="footer">
     <div class="container">
         <div class="footer__row">
             <div class="footer__column">
@@ -32,7 +32,7 @@
                 <div class="footer__agreement"><a class="footer-link" href="mbounosh43.ru/wp-content/uploads/soglashenie.pdf">Пользовательское соглашение</a></div>
             </div>
             <div class="footer__column">
-                <a href="https://csys.su/" target="_blank"><img src="assets/img/logo__comsys.png" alt="Комсис"></a>
+                <a href="https://csys.su/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo__comsys.png" alt="Комсис"></a>
             </div>
         </div>
     </div>

@@ -97,7 +97,7 @@ if ( ! function_exists( 'mbounosh43_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'mbounosh43' ),
+					__( 'РЕДАКТИРОВАТЬ <span class="screen-reader-text">%s</span>', 'mbounosh43' ),
 					array(
 						'span' => array(
 							'class' => array(),

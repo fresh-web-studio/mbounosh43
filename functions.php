@@ -46,9 +46,14 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		//Добавляю свои миниатюры для Новостей на глвной странице
+
+
+		//Добавляю свои миниатюры для Новостей на главной странице и на странице новостей.
         add_image_size(
             'news-thumb', 300, 300, true
+        );
+        add_image_size(
+            'additional-thumb', 342, 213, true
         );
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -71,9 +76,12 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
                     */
 
                     return '
-            <nav class="navigation %1$s" role="navigation">
-                <div class="nav-links">%3$s</div>
-            </nav>    
+            <div class="container posts">
+                <nav class="navigation %1$s" role="navigation">
+                    <div class="nav-links">%3$s</div>
+                </nav>
+            </div>
+                
             ';
                 }
 
@@ -169,11 +177,10 @@ add_action( 'widgets_init', 'mbounosh43_widgets_init' );*/
  */
 function mbounosh43_scripts() {
 	wp_enqueue_style( 'mbounosh43-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'mbounosh43-style-owl.carousel', get_stylesheet_uri() . 'owlcarousel/assets/owl.carousel.css' );
-	wp_enqueue_style( 'mbounosh43-style-owl.theme.default', get_stylesheet_uri() . 'owlcarousel/assets/owl.theme.default.css' );
+	wp_enqueue_style( 'mbounosh43-style-owl.carousel', get_template_directory_uri() . '/owlcarousel/assets/owl.carousel.css' );
+	wp_enqueue_style( 'mbounosh43-style-owl.theme.default', get_template_directory_uri() . '/owlcarousel/assets/owl.theme.default.css' );
 	wp_style_add_data( 'mbounosh43-style', 'rtl', 'replace' );
 
-	// wp_enqueue_script( 'mbounosh43-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
     //wp_enqueue_script('jquery');
 	wp_enqueue_script( 'mbounosh43-jquery', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'mbounosh43-owl.carousel', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js', array(), _S_VERSION, true );
@@ -184,6 +191,93 @@ function mbounosh43_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mbounosh43_scripts' );
+
+
+/////Создаю свой тип записей для вывода "Дополнительных предметов и секций (additional) "
+add_action( 'init', 'register_post_types' );
+function register_post_types(){
+    register_post_type( 'additional', [
+        'label'  => null,
+        'labels' => [
+            'name'               => 'Факультатив', // основное название для типа записи
+            'singular_name'      => 'Факультатив', // название для одной записи этого типа
+            'add_new'            => 'Добавить факультатив', // для добавления новой записи
+            'add_new_item'       => 'Добавление факультатива', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item'          => 'Редактирование факультатива', // для редактирования типа записи
+            'new_item'           => 'Новый факультатив', // текст новой записи
+            'view_item'          => 'Смотреть факультатив', // для просмотра записи этого типа.
+            'search_items'       => 'Искать факультатив', // для поиска по этим типам записи
+            'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+            'parent_item_colon'  => '', // для родителей (у древовидных типов)
+            'menu_name'          => 'Факультативы', // название меню
+        ],
+        'description'         => 'Факультативы - это дополнительные занятия для детей. Например: секции баскетбола, шашки и т.д.',
+        'public'              => true,
+        'publicly_queryable'  => true, // зависит от public
+        'exclude_from_search' => true, // зависит от public
+        'show_ui'             => true, // зависит от public
+        'show_in_nav_menus'   => true, // зависит от public
+        'show_in_menu'        => true, // показывать ли в меню адмнки
+        'show_in_admin_bar'   => true, // зависит от show_in_menu
+        'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+        'rest_base'           => null, // $post_type. C WP 4.7
+        'menu_position'       => 4,
+        'menu_icon'           => 'dashicons-welcome-learn-more',
+        //'capability_type'   => 'post',
+        //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+        //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+        'hierarchical'        => false,
+        'supports'            => [ 'title', 'editor','thumbnail','post-formats' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies'          => [],
+        'has_archive'         => false,
+        'rewrite'             => true,
+        'query_var'           => true,
+    ] );
+}
+/////Создаю свой тип записей для вывода "Ссылки (links) "
+/*add_action( 'init', 'register_post_types_links' );
+function register_post_types_links(){
+    register_post_type( 'links', [
+        'label'  => null,
+        'labels' => [
+            'name'               => 'Ссылки', // основное название для типа записи
+            'singular_name'      => 'Ссылка', // название для одной записи этого типа
+            'add_new'            => 'Добавить ссылку', // для добавления новой записи
+            'add_new_item'       => 'Добавление ссылку', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item'          => 'Редактирование ссылки', // для редактирования типа записи
+            'new_item'           => 'Новая ссылка', // текст новой записи
+            'view_item'          => 'Смотреть ссылку', // для просмотра записи этого типа.
+            'search_items'       => 'Искать ссылку', // для поиска по этим типам записи
+            'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+            'parent_item_colon'  => '', // для родителей (у древовидных типов)
+            'menu_name'          => 'Ссылки', // название меню
+        ],
+        'description'         => 'Ссылки для главной страницы для перехода на официальные сайты',
+        'public'              => true,
+        'publicly_queryable'  => true, // зависит от public
+        'exclude_from_search' => true, // зависит от public
+        'show_ui'             => true, // зависит от public
+        'show_in_nav_menus'   => true, // зависит от public
+        'show_in_menu'        => true, // показывать ли в меню адмнки
+        'show_in_admin_bar'   => true, // зависит от show_in_menu
+        'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+        'rest_base'           => null, // $post_type. C WP 4.7
+        'menu_position'       => 5,
+        'menu_icon'           => 'dashicons-admin-links',
+        //'capability_type'   => 'post',
+        //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+        //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+        'hierarchical'        => false,
+        'supports'            => [ 'title', 'editor','thumbnail','post-formats' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies'          => [],
+        'has_archive'         => false,
+        'rewrite'             => true,
+        'query_var'           => true,
+    ] );
+}
+*/
 
 /**
  * Implement the Custom Header feature.

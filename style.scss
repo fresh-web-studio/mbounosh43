@@ -708,9 +708,7 @@ html {
   }
 
   .site-main .comment-navigation,
-  .site-main,
   .posts-navigation,
-  .site-main,
   .post-navigation {
     margin: 0 0 1.5em;
   }
@@ -1652,6 +1650,7 @@ main {
 
     .additional-items__img img {
       height: 100%;
+      width: auto;
     }
 
     .additional-items__info {
@@ -1866,8 +1865,49 @@ main {
     }
 
   }
+
+  .posts {
+    .entry-title {
+      text-align: center;
+    }
+    .post-thumbnail {
+      margin: 0 auto;
+      width: 26.042vw;
+    }
+    .post-thumbnail img {
+      width: inherit;
+    }
+    .nav-links {
+      justify-content: space-between;
+    }
+    .nav-previous, .nav-next {
+      flex: 0;
+    }
+    .nav-previous a, .nav-next a {
+    padding: 0.2vw 2vw;
+    cursor: pointer;
+    width: max-content;
+    height: 2.083vw;
+    box-sizing: border-box;
+    border-radius: 2.604vw;
+    font-size: 1.042vw;
+    line-height: 1.250vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90.4deg, #DC1C45 0.2%, #DC2C16 101.73%);
+    }
+    .nav-subtitle {
+      margin-right: 0.4vw;
+    }
+    .entry-meta, .cat-links {
+      display: none;
+    }
+
+  }
 }
-footer {
+footer.footer {
   background: linear-gradient(90deg, #04558F 27.87%, #008ECB 72.16%);
 
   .footer__row {

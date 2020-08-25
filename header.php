@@ -49,7 +49,7 @@
 
                 <div class="header__row">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img src="assets/img/logo.svg" alt="Школа радости" class="header__logo">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Школа радости" class="header__logo">
                     </a>
                     <div class="header__column">
                         <div class="header__name">
