@@ -104,6 +104,15 @@ get_header();
                 </div>
             </div>
         </div>
+        <div class="interview">
+            <div class="container">
+                <div class="interview__title">
+                    Опрос
+                </div>
+                <?php get_poll();?>
+                <?php /*display_polls_archive_link();*/ ?>
+            </div>
+        </div>
         <div class="links">
             <div class="container">
                 <div class="links__title">Ссылки</div>

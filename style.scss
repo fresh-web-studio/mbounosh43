@@ -1667,13 +1667,15 @@ main {
       margin-bottom: 2.396vw;
     }
 
-    .wp-polls-form p strong {
+    .wp-polls-form p strong, .wp-polls p {
       font-size: 1.563vw;
       line-height: 1.823vw;
       font-weight: normal;
       text-align: center;
     }
-
+    .wp-polls {
+      padding-bottom: 3.677vw;
+    }
     .wp-polls-ans {
       margin: 0 auto;
       display: block;
@@ -1684,7 +1686,6 @@ main {
       font-size: 0.938vw;
       line-height: 1.094vw;
       margin-top: 1.094vw;
-      margin-bottom: 3.906vw;
       text-align: center;
       color: #769498;
       display: block;
@@ -1703,21 +1704,20 @@ main {
     }
 
     /* для элемента input c type="radio" */
-    .custom-radio {
-      position: absolute;
+    .wp-polls-ul input[type="radio"] {
       z-index: -1;
       opacity: 0;
     }
 
-    /* для элемента label связанного с .custom-radio */
-    .custom-radio + label {
+    /* для элемента label связанного с .wp-polls-ul input[type="radio"] */
+    .wp-polls-ul input[type="radio"] + label {
       display: inline-flex;
       align-items: center;
       user-select: none;
     }
 
     /* создание в label псевдоэлемента  before со следующими стилями */
-    .custom-radio + label::before {
+    .wp-polls-ul input[type="radio"] + label::before {
       content: '';
       display: inline-block;
       width: 1.823vw;
@@ -1725,7 +1725,7 @@ main {
       flex-shrink: 0;
       flex-grow: 0;
       border-radius: 50%;
-      margin-right: 2.742vw;
+      margin-right: 1.3vw;
       background-color: $blue-light;
       background-repeat: no-repeat;
       background-position: center center;
@@ -1733,35 +1733,35 @@ main {
     }
 
     /* стили при наведении курсора на радио */
-    .custom-radio:not(:disabled):not(:checked) + label:hover::before {
+    .wp-polls-ul input[type="radio"]:not(:disabled):not(:checked) + label:hover::before {
       border-color: $red;
     }
 
     /* стили для активной радио кнопки (при нажатии на неё) */
-    .custom-radio:not(:disabled):active + label::before {
+    .wp-polls-ul input[type="radio"]:not(:disabled):active + label::before {
       background-color: $red;
       border-color: $red;
     }
 
     /* стили для радио кнопки, находящейся в фокусе */
-    .custom-radio:focus + label::before {
+    .wp-polls-ul input[type="radio"]:focus + label::before {
       box-shadow: 0 0 0 0.2vw $red;
     }
 
     /* стили для радио кнопки, находящейся в фокусе и не находящейся в состоянии checked */
-    .custom-radio:focus:not(:checked) + label::before {
+    .wp-polls-ul input[type="radio"]:focus:not(:checked) + label::before {
       border-color: $red;
     }
 
     /* стили для радио кнопки, находящейся в состоянии checked */
-    .custom-radio:checked + label::before {
+    .wp-polls-ul input[type="radio"]:checked + label::before {
       border-color: $red;
       background-color: $red;
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
     }
 
     /* стили для радио кнопки, находящейся в состоянии disabled */
-    .custom-radio:disabled + label::before {
+    .wp-polls-ul input[type="radio"]:disabled + label::before {
       background-color: $red;
     }
 
@@ -1786,6 +1786,11 @@ main {
     .Buttons:hover {
       background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
       box-shadow: 0.260vw 0.260vw 1.042vw rgba(0, 0, 0, 0.51);
+    }
+    .wp-polls-loading {
+      position: relative;
+      top: -20vw;
+      transform: scale(2);
     }
   }
 
@@ -2322,7 +2327,7 @@ footer.footer {
         margin-bottom: 2.396vw * $coefficient;
       }
 
-      .wp-polls-form p strong {
+      .wp-polls-form p strong, .wp-polls p strong, .wp-polls p {
         font-size: 1.563vw * $coefficient;
         line-height: 1.823vw * $coefficient;
       }
@@ -2331,7 +2336,6 @@ footer.footer {
         font-size: 0.938vw * $coefficient;
         line-height: 1.094vw * $coefficient;
         margin-top: 1.094vw * $coefficient;
-        margin-bottom: 3.906vw * $coefficient;
       }
 
       .wp-polls-ul {
@@ -2346,7 +2350,7 @@ footer.footer {
       }
 
       /* создание в label псевдоэлемента  before со следующими стилями */
-      .custom-radio + label::before {
+      .wp-polls-ul input[type="radio"] + label::before {
         width: 1.823vw * $coefficient;
         height: 1.823vw * $coefficient;
         flex-shrink: 0;
@@ -2367,6 +2371,9 @@ footer.footer {
       .Buttons:hover {
         background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
         box-shadow: 0.260vw 0.260vw 1.042vw rgba(0, 0, 0, 0.51);
+      }
+      .wp-polls-loading {
+        top: -20vw * $coefficient;
       }
     }
 
@@ -2408,7 +2415,7 @@ footer.footer {
       }
     }
   }
-  footer {
+  footer.footer {
     .footer__row {
       padding: 2.083vw * $coefficient 0;
       font-size: 0.625vw * $coefficient;
@@ -2901,20 +2908,22 @@ footer.footer {
         margin-bottom: 2.396vw * $coefficient;
       }
 
-      .wp-polls-form p strong {
+      .wp-polls-form p strong, .wp-polls p strong, .wp-polls p {
         font-size: 1.563vw * $coefficient;
         line-height: 1.823vw * $coefficient;
+      }
+      .wp-polls {
+        padding-bottom: 3.677vw * $coefficient;
       }
 
       .wp-polls-ans a {
         font-size: 0.938vw * $coefficient;
         line-height: 1.094vw * $coefficient;
         margin-top: 1.094vw * $coefficient;
-        margin-bottom: 3.906vw * $coefficient;
       }
 
       .wp-polls-ul {
-        font-size: 1.302vw * $coefficient;
+        font-size: 4.023711vw;
         line-height: 2.188vw * $coefficient;
         margin-top: 2.344vw * $coefficient;
         margin-bottom: 2.135vw * $coefficient;
@@ -2925,7 +2934,7 @@ footer.footer {
       }
 
       /* создание в label псевдоэлемента  before со следующими стилями */
-      .custom-radio + label::before {
+      .wp-polls-ul input[type="radio"] + label::before {
         width: 1.823vw * $coefficient;
         height: 1.823vw * $coefficient;
         flex-shrink: 0;
@@ -2950,6 +2959,9 @@ footer.footer {
       .Buttons:hover {
         background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
         box-shadow: none;
+      }
+      .wp-polls-loading {
+        top: -20vw * $coefficient;
       }
     }
 
@@ -2992,7 +3004,7 @@ footer.footer {
       }
     }
   }
-  footer {
+  footer.footer {
     .footer__row {
       padding: 2.083vw * $coefficient 4.8208192728vw;
       font-size: 4vw;

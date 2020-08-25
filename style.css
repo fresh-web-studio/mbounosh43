@@ -1206,7 +1206,7 @@ main .additional-items {
     color: #FFFFFF; }
 main .interview {
   /* для элемента input c type="radio" */
-  /* для элемента label связанного с .custom-radio */
+  /* для элемента label связанного с .wp-polls-ul input[type="radio"] */
   /* создание в label псевдоэлемента  before со следующими стилями */
   /* стили при наведении курсора на радио */
   /* стили для активной радио кнопки (при нажатии на неё) */
@@ -1216,11 +1216,13 @@ main .interview {
   /* стили для радио кнопки, находящейся в состоянии disabled */ }
   main .interview .interview__title {
     margin-bottom: 2.396vw; }
-  main .interview .wp-polls-form p strong {
+  main .interview .wp-polls-form p strong, main .interview .wp-polls p {
     font-size: 1.563vw;
     line-height: 1.823vw;
     font-weight: normal;
     text-align: center; }
+  main .interview .wp-polls {
+    padding-bottom: 3.677vw; }
   main .interview .wp-polls-ans {
     margin: 0 auto;
     display: block;
@@ -1229,7 +1231,6 @@ main .interview {
     font-size: 0.938vw;
     line-height: 1.094vw;
     margin-top: 1.094vw;
-    margin-bottom: 3.906vw;
     text-align: center;
     color: #769498;
     display: block; }
@@ -1241,15 +1242,14 @@ main .interview {
     list-style: none; }
   main .interview .wp-polls-ul li {
     margin-top: 1.250vw; }
-  main .interview .custom-radio {
-    position: absolute;
+  main .interview .wp-polls-ul input[type="radio"] {
     z-index: -1;
     opacity: 0; }
-  main .interview .custom-radio + label {
+  main .interview .wp-polls-ul input[type="radio"] + label {
     display: inline-flex;
     align-items: center;
     user-select: none; }
-  main .interview .custom-radio + label::before {
+  main .interview .wp-polls-ul input[type="radio"] + label::before {
     content: '';
     display: inline-block;
     width: 1.823vw;
@@ -1257,25 +1257,25 @@ main .interview {
     flex-shrink: 0;
     flex-grow: 0;
     border-radius: 50%;
-    margin-right: 2.742vw;
+    margin-right: 1.3vw;
     background-color: #02adff;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%; }
-  main .interview .custom-radio:not(:disabled):not(:checked) + label:hover::before {
+  main .interview .wp-polls-ul input[type="radio"]:not(:disabled):not(:checked) + label:hover::before {
     border-color: #DC2C16; }
-  main .interview .custom-radio:not(:disabled):active + label::before {
+  main .interview .wp-polls-ul input[type="radio"]:not(:disabled):active + label::before {
     background-color: #DC2C16;
     border-color: #DC2C16; }
-  main .interview .custom-radio:focus + label::before {
+  main .interview .wp-polls-ul input[type="radio"]:focus + label::before {
     box-shadow: 0 0 0 0.2vw #DC2C16; }
-  main .interview .custom-radio:focus:not(:checked) + label::before {
+  main .interview .wp-polls-ul input[type="radio"]:focus:not(:checked) + label::before {
     border-color: #DC2C16; }
-  main .interview .custom-radio:checked + label::before {
+  main .interview .wp-polls-ul input[type="radio"]:checked + label::before {
     border-color: #DC2C16;
     background-color: #DC2C16;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); }
-  main .interview .custom-radio:disabled + label::before {
+  main .interview .wp-polls-ul input[type="radio"]:disabled + label::before {
     background-color: #DC2C16; }
   main .interview .Buttons {
     margin: 0 auto;
@@ -1296,6 +1296,10 @@ main .interview {
   main .interview .Buttons:hover {
     background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
     box-shadow: 0.26vw 0.26vw 1.042vw rgba(0, 0, 0, 0.51); }
+  main .interview .wp-polls-loading {
+    position: relative;
+    top: -20vw;
+    transform: scale(2); }
 main .links {
   padding: 5.677vw 0;
   background-color: #E6F8FB; }
@@ -1633,14 +1637,13 @@ footer.footer {
     /* создание в label псевдоэлемента  before со следующими стилями */ }
     main .interview .interview__title {
       margin-bottom: 3.3544vw; }
-    main .interview .wp-polls-form p strong {
+    main .interview .wp-polls-form p strong, main .interview .wp-polls p strong, main .interview .wp-polls p {
       font-size: 2.1882vw;
       line-height: 2.5522vw; }
     main .interview .wp-polls-ans a {
       font-size: 1.3132vw;
       line-height: 1.5316vw;
-      margin-top: 1.5316vw;
-      margin-bottom: 5.4684vw; }
+      margin-top: 1.5316vw; }
     main .interview .wp-polls-ul {
       font-size: 1.8228vw;
       line-height: 3.0632vw;
@@ -1648,7 +1651,7 @@ footer.footer {
       margin-bottom: 2.989vw; }
     main .interview .wp-polls-ul li {
       margin-top: 1.75vw; }
-    main .interview .custom-radio + label::before {
+    main .interview .wp-polls-ul input[type="radio"] + label::before {
       width: 2.5522vw;
       height: 2.5522vw;
       flex-shrink: 0;
@@ -1665,6 +1668,8 @@ footer.footer {
     main .interview .Buttons:hover {
       background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
       box-shadow: 0.26vw 0.26vw 1.042vw rgba(0, 0, 0, 0.51); }
+    main .interview .wp-polls-loading {
+      top: -28vw; }
   main .links {
     padding: 7.9478vw 0; }
     main .links .links__title {
@@ -1690,15 +1695,15 @@ footer.footer {
       font-size: 0.9478vw;
       line-height: 1.1662vw; }
 
-  footer .footer__row {
+  footer.footer .footer__row {
     padding: 2.9162vw 0;
     font-size: 0.875vw;
     line-height: 1.0206vw; }
-  footer .footer__column:first-child {
+  footer.footer .footer__column:first-child {
     width: 30.0412vw; }
-  footer .footer__column:nth-child(2) div {
+  footer.footer .footer__column:nth-child(2) div {
     margin: 0.364vw 0; }
-  footer .footer__column:last-child {
+  footer.footer .footer__column:last-child {
     margin-top: 1.26vw; } }
 @media all and (max-width: 415px) {
   .container {
@@ -2028,22 +2033,23 @@ footer.footer {
     /* создание в label псевдоэлемента  before со следующими стилями */ }
     main .interview .interview__title {
       margin-bottom: 11.0851084239vw; }
-    main .interview .wp-polls-form p strong {
+    main .interview .wp-polls-form p strong, main .interview .wp-polls p strong, main .interview .wp-polls p {
       font-size: 7.2312289093vw;
       line-height: 8.4341204745vw; }
+    main .interview .wp-polls {
+      padding-bottom: 17.0116626355vw; }
     main .interview .wp-polls-ans a {
       font-size: 4.3396626468vw;
       line-height: 5.0613975859vw;
-      margin-top: 5.0613975859vw;
-      margin-bottom: 18.0711325141vw; }
+      margin-top: 5.0613975859vw; }
     main .interview .wp-polls-ul {
-      font-size: 6.023710838vw;
+      font-size: 4.023711vw;
       line-height: 10.1227951718vw;
       margin-top: 10.8445301109vw;
       margin-bottom: 9.8775903527vw; }
     main .interview .wp-polls-ul li {
       margin-top: 5.783132525vw; }
-    main .interview .custom-radio + label::before {
+    main .interview .wp-polls-ul input[type="radio"] + label::before {
       width: 8.4341204745vw;
       height: 8.4341204745vw;
       flex-shrink: 0;
@@ -2064,6 +2070,8 @@ footer.footer {
     main .interview .Buttons:hover {
       background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
       box-shadow: none; }
+    main .interview .wp-polls-loading {
+      top: -92.5301204vw; }
   main .links {
     padding: 26.2646746755vw 0;
     background-color: #E6F8FB; }
@@ -2090,19 +2098,19 @@ footer.footer {
       font-size: 4vw;
       line-height: 5vw; }
 
-  footer .footer__row {
+  footer.footer .footer__row {
     padding: 9.6370120397vw 4.8208192728vw;
     font-size: 4vw;
     line-height: 5vw;
     text-align: center; }
-  footer .footer__column:first-child {
+  footer.footer .footer__column:first-child {
     width: 99.2755661772vw; }
-  footer .footer__column:nth-child(2) div {
+  footer.footer .footer__column:nth-child(2) div {
     margin: 5vw 0; }
-  footer .footer__mail {
+  footer.footer .footer__mail {
     display: block;
     margin: 5vw 0; }
-  footer .footer__column:last-child {
+  footer.footer .footer__column:last-child {
     margin: 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */
