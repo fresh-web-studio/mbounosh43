@@ -110,7 +110,7 @@ get_header();
                     Опрос
                 </div>
                 <?php get_poll();?>
-                <?php /*display_polls_archive_link();*/ ?>
+                <?php display_polls_archive_link(); ?>
             </div>
         </div>
         <div class="links">
