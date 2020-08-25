@@ -68,6 +68,25 @@ get_header();
                 <a href="category/novosti" class="news__more">Еще новости</a>
             </div>
         </div>
+        <div class="container-narrow">
+            <div class="contact-form">
+                <div class="contact-form__photo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact-form__photo.jpg" alt="Контакты">
+                </div>
+                <div class="contact-form__contacts">
+                    <div class="contact-form__title">Контакты:</div>
+                    <div class="contact-form__text">Адрес: 622048, обл. Свердловская, г. Нижний Тагил, ул. Зари, д. 30</div>
+                    <div class="contact-form__text">Телефон: <a href="tel:+73435310408">8 (3435) 31-04-08</a></div>
+                    <div class="contact-form__text">Электронная почта: <a href="mailto:skhool43@yandex.ru">skhool43@yandex.ru</a>
+                    </div>
+                    <div class="contact-form__form">
+                        <div class="contact-form__title-form">Напишите нам:</div>
+                        <?php echo do_shortcode('[contact-form-7 id="9953" title="Форма для главной страницы"]'); ?>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <div class="additional-items">
             <div class="container">
                 <div class="additional-items__title">
@@ -110,7 +129,7 @@ get_header();
                     Опрос
                 </div>
                 <?php get_poll();?>
-                <?php display_polls_archive_link(); ?>
+                <?php /*display_polls_archive_link(); */?>
             </div>
         </div>
         <div class="links">

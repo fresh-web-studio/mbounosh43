@@ -369,8 +369,6 @@ body {
   body h5,
   body h6 {
     clear: both; }
-  body p {
-    margin-bottom: 1.5em; }
   body dfn,
   body cite,
   body em,
@@ -1127,18 +1125,18 @@ main .contact-form {
   main .contact-form .contact-form__title {
     font-size: 1.719vw;
     line-height: 2.083vw;
-    margin-bottom: 2.500vw;
+    margin-bottom: 1.8vw;
     color: #04558F; }
   main .contact-form .contact-form__title-form {
     font-size: 1.042vw;
     line-height: 1.250vw;
-    margin-top: 2.240vw;
+    margin-top: 1.6vw;
     color: #04558F; }
   main .contact-form .contact-form__text {
     font-size: 0.938vw;
     line-height: 1.094vw;
-    margin-top: 1.302vw;
-    margin-bottom: 1.354vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     color: #04558F; }
     main .contact-form .contact-form__text a {
       color: #04558F; }
@@ -1149,11 +1147,13 @@ main .contact-form {
     border-radius: 0.521vw;
     box-sizing: border-box;
     width: 100%;
-    padding: 0.5vw 0.677vw 0.3vw;
+    padding: 0.5vw 0.677vw;
     margin: 0.677vw 0;
     color: #2D87C9; }
     main .contact-form input::placeholder, main .contact-form textarea::placeholder {
       color: #2D87C9; }
+  main .contact-form .hide-form {
+    display: none; }
   main .contact-form textarea {
     height: 6.635vw; }
   main .contact-form input[type="submit"] {
@@ -1585,23 +1585,23 @@ footer.footer {
     main .contact-form .contact-form__title {
       font-size: 2.4066vw;
       line-height: 2.9162vw;
-      margin-bottom: 3.5vw; }
+      margin-bottom: 2.52vw; }
     main .contact-form .contact-form__title-form {
       font-size: 1.4588vw;
       line-height: 1.75vw;
-      margin-top: 3.136vw; }
+      margin-top: 2.24vw; }
     main .contact-form .contact-form__text {
       font-size: 1.3132vw;
       line-height: 1.5316vw;
-      margin-top: 1.8228vw;
-      margin-bottom: 1.8956vw; }
+      margin-top: 1.4vw;
+      margin-bottom: 1.4vw; }
     main .contact-form .contact-form__form {
       width: 28.4382vw; }
     main .contact-form input, main .contact-form textarea {
       border: 0.0728vw solid #2D87C9;
       border-radius: 0.7294vw;
       width: 100%;
-      padding: 0.7vw 0.9478vw 0.42vw;
+      padding: 0.7vw 0.9478vw;
       margin: 0.9478vw 0; }
     main .contact-form textarea {
       height: 9.289vw; }
@@ -1975,7 +1975,7 @@ footer.footer {
       font-size: 7.9529638484vw;
       line-height: 9.6370120397vw;
       margin-top: 10vw;
-      margin-bottom: 6.93975903vw; }
+      margin-bottom: 8.327710836vw; }
     main .contact-form .contact-form__title-form {
       font-size: 4.8208192728vw;
       line-height: 5.783132525vw;
@@ -1992,7 +1992,7 @@ footer.footer {
       border: 0.240578313vw solid #2D87C9;
       border-radius: 2.4104096364vw;
       width: 100%;
-      padding: 1.387951806vw 3.1321445755vw 1.387951806vw;
+      padding: 1.387951806vw 3.1321445755vw;
       margin: 3.1321445755vw 0;
       -webkit-appearance: none;
       -moz-appearance: none;

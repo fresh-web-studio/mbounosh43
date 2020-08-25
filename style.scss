@@ -415,10 +415,6 @@ html {
     clear: both;
   }
 
-  p {
-    margin-bottom: 1.5em;
-  }
-
   dfn,
   cite,
   em,
@@ -1547,22 +1543,22 @@ main {
     .contact-form__title {
       font-size: 1.719vw;
       line-height: 2.083vw;
-      margin-bottom: 2.500vw;
+      margin-bottom: 1.8vw;
       color: #04558F;
     }
 
     .contact-form__title-form {
       font-size: 1.042vw;
       line-height: 1.250vw;
-      margin-top: 2.240vw;
+      margin-top: 1.6vw;
       color: #04558F;
     }
 
     .contact-form__text {
       font-size: 0.938vw;
       line-height: 1.094vw;
-      margin-top: 1.302vw;
-      margin-bottom: 1.354vw;
+      margin-top: 1vw;
+      margin-bottom: 1vw;
       color: #04558F;
 
       a {
@@ -1579,7 +1575,7 @@ main {
       border-radius: 0.521vw;
       box-sizing: border-box;
       width: 100%;
-      padding: 0.5vw 0.677vw 0.3vw;
+      padding: 0.5vw 0.677vw;
       margin: 0.677vw 0;
       color: $blue;
 
@@ -1587,7 +1583,9 @@ main {
         color: $blue;
       }
     }
-
+    .hide-form {
+      display: none;
+    }
     textarea {
       height: 6.635vw;
     }
@@ -2242,20 +2240,20 @@ footer.footer {
       .contact-form__title {
         font-size: 1.719vw * $coefficient;
         line-height: 2.083vw * $coefficient;
-        margin-bottom: 2.500vw * $coefficient;
+        margin-bottom: 1.8vw * $coefficient;
       }
 
       .contact-form__title-form {
         font-size: 1.042vw * $coefficient;
         line-height: 1.250vw * $coefficient;
-        margin-top: 2.240vw * $coefficient;
+        margin-top: 1.6vw * $coefficient;
       }
 
       .contact-form__text {
         font-size: 0.938vw * $coefficient;
         line-height: 1.094vw * $coefficient;
-        margin-top: 1.302vw * $coefficient;
-        margin-bottom: 1.354vw * $coefficient;
+        margin-top: 1vw * $coefficient;
+        margin-bottom: 1vw * $coefficient;
       }
 
       .contact-form__form {
@@ -2266,7 +2264,7 @@ footer.footer {
         border: 0.052vw * $coefficient solid $blue;
         border-radius: 0.521vw * $coefficient;
         width: 100%;
-        padding: 0.5vw * $coefficient 0.677vw * $coefficient 0.3vw * $coefficient;
+        padding: 0.5vw * $coefficient 0.677vw * $coefficient;
         margin: 0.677vw * $coefficient 0;
       }
 
@@ -2817,7 +2815,7 @@ footer.footer {
         font-size: 1.719vw * $coefficient;
         line-height: 2.083vw * $coefficient;
         margin-top: 10vw;
-        margin-bottom: 1.500vw * $coefficient;
+        margin-bottom: 1.8vw * $coefficient;
       }
 
       .contact-form__title-form {
@@ -2842,7 +2840,7 @@ footer.footer {
         border: 0.052vw * $coefficient solid $blue;
         border-radius: 0.521vw * $coefficient;
         width: 100%;
-        padding: 0.3vw * $coefficient 0.677vw * $coefficient 0.3vw * $coefficient;
+        padding: 0.3vw * $coefficient 0.677vw * $coefficient;
         margin: 0.677vw * $coefficient 0;
         -webkit-appearance: none;
         -moz-appearance: none;
