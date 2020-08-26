@@ -47,8 +47,9 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-
-		//Добавляю свои миниатюры для Новостей на главной странице и на странице новостей.
+        /**
+         * Добавляю свои миниатюры для Новостей на главной странице и на странице новостей.
+         */
         add_image_size(
             'news-thumb', 300, 300, true
         );
@@ -64,7 +65,10 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 
 			)
 		);
-        // удаляет H2 из шаблона пагинации
+
+        /**
+         * удаляет H2 из шаблона пагинации
+         */
         add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
                 function my_navigation_template( $template, $class ){
                     /*
@@ -194,8 +198,10 @@ function mbounosh43_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'mbounosh43_scripts' );
 
+/**
+ * Создаю свой тип записей для вывода "Дополнительных предметов и секций (additional)
+ * */
 
-/////Создаю свой тип записей для вывода "Дополнительных предметов и секций (additional) "
 add_action( 'init', 'register_post_types' );
 function register_post_types(){
     register_post_type( 'additional', [
@@ -307,7 +313,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
 
 /**
  * Вывод контактных данных через настойки темы

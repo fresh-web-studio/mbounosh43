@@ -1289,6 +1289,21 @@ main {
       background-color: $blue;
     }
   }
+  .ngg-gallery-thumbnail {
+    width: ($container / 3) - (1.042vw * 2);
+    margin: 1.042vw 1.042vw;
+  }
+  .ngg-gallery-thumbnail a {
+    outline: 0.521vw solid #fff;
+    height: 13.021vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    opacity: .9;
+  }
+  .ngg-gallery-thumbnail a:hover {
+    opacity: 1;
+  }
 
   .slide-wrapper {
     height: 21.615vw;
@@ -1342,7 +1357,6 @@ main {
       right: -0.1vw;
     }
   }
-
   .news {
     padding-bottom: 5.677vw;
 
@@ -1458,7 +1472,9 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    .ngg-navigation {
+      display: none!important;
+    }
     .gallery__title {
       padding-bottom: 2.083vw;
       font-size: 1.719vw;
@@ -1473,16 +1489,6 @@ main {
       justify-content: space-between;
       flex-wrap: wrap;
       margin-bottom: 2vw;
-    }
-
-    .gallery__item-frame {
-      width: ($container / 3) - (1.042vw * 2);
-      margin: 1.042vw 1.042vw;
-      opacity: .9;
-    }
-
-    .gallery__item-frame:hover {
-      opacity: 1;
     }
 
     .gallery__img {
@@ -2088,6 +2094,14 @@ footer.footer {
       font-size: 1.719vw * $coefficient;
       line-height: 2.083vw * $coefficient;
     }
+    .ngg-gallery-thumbnail {
+      width: ($container / 3) - ((1.042vw * $coefficient) * 2);
+      margin: 1.042vw * $coefficient 1.042vw * $coefficient;
+    }
+    .ngg-gallery-thumbnail a {
+      outline: 0.521vw * $coefficient solid #fff;
+      height: 13.021vw * $coefficient;
+    }
 
     .slide-wrapper {
       height: 21.615vw * $coefficient;
@@ -2676,6 +2690,14 @@ footer.footer {
       margin-bottom: 5vw;
       font-size: 1.719vw * $coefficient;
       line-height: 2.083vw * $coefficient;
+    }
+    .ngg-gallery-thumbnail {
+      width: ($container) - ((1.042vw * $coefficient) * 2);
+      margin: 1.042vw * $coefficient 1.042vw * $coefficient;
+    }
+    .ngg-gallery-thumbnail a {
+      outline: 0.521vw * $coefficient solid #fff;
+      height: 13.021vw * $coefficient;
     }
 
     .slide-wrapper {

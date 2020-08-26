@@ -74,50 +74,8 @@ get_header();
                     <div class="gallery__title">Наши будни</div>
                     <div class="gallery__item-list">
                         <?php echo do_shortcode( '[nggallery id=7 images=6]' ) ?>
-                        <a href="#" class="gallery__item-frame">
-                            <div class="gallery__item">
-                                <div class="gallery__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_01.jpg" alt="Фото наши будни">
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="gallery__item-frame">
-                            <div class="gallery__item">
-                                <div class="gallery__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_02.jpg" alt="Фото наши будни">
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="gallery__item-frame">
-                            <div class="gallery__item">
-                                <div class="gallery__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_03.jpg" alt="Фото наши будни">
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="gallery__item-frame">
-                            <div class="gallery__item">
-                                <div class="gallery__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_04.jpg" alt="Фото наши будни">
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="gallery__item-frame">
-                            <div class="gallery__item">
-                                <div class="gallery__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_05.jpg" alt="Фото наши будни">
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="gallery__item-frame">
-                            <div class="gallery__item">
-                                <div class="gallery__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_06.jpg" alt="Фото наши будни">
-                                </div>
-                            </div>
-                        </a>
                     </div>
-                    <a href="#" class="gallery__more">Еще фото</a>
+                    <a href="fotogalereya/" class="gallery__more">Еще фото</a>
                 </div>
             </div>
         </div>

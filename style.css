@@ -939,6 +939,18 @@ main .pagination {
     background-color: #DC2C16; }
   main .pagination span.page-numbers.dots {
     background-color: #2D87C9; }
+main .ngg-gallery-thumbnail {
+  width: 21.1103333333vw;
+  margin: 1.042vw 1.042vw; }
+main .ngg-gallery-thumbnail a {
+  outline: 0.521vw solid #fff;
+  height: 13.021vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  opacity: .9; }
+main .ngg-gallery-thumbnail a:hover {
+  opacity: 1; }
 main .slide-wrapper {
   height: 21.615vw;
   margin-top: 2.083vw; }
@@ -1065,6 +1077,8 @@ main .gallery {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  main .gallery .ngg-navigation {
+    display: none !important; }
   main .gallery .gallery__title {
     padding-bottom: 2.083vw;
     font-size: 1.719vw;
@@ -1077,12 +1091,6 @@ main .gallery {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 2vw; }
-  main .gallery .gallery__item-frame {
-    width: 21.1103333333vw;
-    margin: 1.042vw 1.042vw;
-    opacity: .9; }
-  main .gallery .gallery__item-frame:hover {
-    opacity: 1; }
   main .gallery .gallery__img {
     outline: 0.521vw solid #fff;
     height: 13.021vw;
@@ -1489,6 +1497,12 @@ footer.footer {
     margin-top: 7.9478vw;
     font-size: 2.4066vw;
     line-height: 2.9162vw; }
+  main .ngg-gallery-thumbnail {
+    width: 29.6837333333vw;
+    margin: 1.4588vw 1.4588vw; }
+  main .ngg-gallery-thumbnail a {
+    outline: 0.7294vw solid #fff;
+    height: 18.2294vw; }
   main .slide-wrapper {
     height: 30.261vw;
     margin-top: 2.9162vw; }
@@ -1887,6 +1901,12 @@ footer.footer {
     margin-bottom: 5vw;
     font-size: 7.9529638484vw;
     line-height: 9.6370120397vw; }
+  main .ngg-gallery-thumbnail {
+    width: 90.3583614543vw;
+    margin: 4.8208192728vw 4.8208192728vw; }
+  main .ngg-gallery-thumbnail a {
+    outline: 2.4104096364vw solid #fff;
+    height: 60.2417348864vw; }
   main .slide-wrapper {
     margin-top: 9vw; }
     main .slide-wrapper .owl-carousel .owl-nav button {
