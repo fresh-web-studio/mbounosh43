@@ -19,12 +19,16 @@ get_header();
         <div class="container">
             <div class="slide-wrapper">
                 <div class="owl-carousel owl-theme" id="owl-carousel1">
-                    <div class="slide-item slide1">
-
-                    </div>
-                    <div class="slide-item slide1">
-
-                    </div>
+                    <?php
+                    global $post;
+                    $args = array( 'numberposts' => -1, 'post_type' => 'slider');
+                    $myposts = get_posts( $args );
+                    foreach($myposts as $post){ setup_postdata($post); ?>
+                        <div class="slide-item-img"><?php the_post_thumbnail();?></div>
+                        <?php
+                    }
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </div>
