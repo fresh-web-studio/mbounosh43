@@ -308,3 +308,98 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Вывод контактных данных через настойки темы
+ */
+/**
+ * Добавляет блок для ввода контактных данных
+ */
+function mbounosh43_contacts_customize_register( $wp_customize ) {
+    /*
+    Добавляем секцию в настройки темы
+    */
+    $wp_customize->add_section(
+// ID
+        'data_site_section',
+// Массив аргументов
+        array(
+            'title' => 'Контактные данные для сайта',
+            'capability' => 'edit_theme_options',
+            'description' => "Тут можно указать контактные данные")
+    );
+    /*
+    Добавляем поле контактных данных
+    */
+    $wp_customize->add_setting(
+// ID
+        'theme_contacttext',
+// Массив аргументов
+        array(
+            'default' => '',
+            'type' => 'option'
+        )
+    );
+    $wp_customize->add_control(
+// ID
+        'theme_contacttext_control',
+// Массив аргументов
+        array(
+            'type' => 'text',
+            'label' => "Электронная почта",
+            'section' => 'data_site_section',
+            'settings' => 'theme_contacttext'
+        )
+    );
+    /*
+    Добавляем поле телефона site_telephone
+    */
+    $wp_customize->add_setting(
+    // ID
+        'site_telephone',
+    // Массив аргументов
+        array(
+            'default' => '',
+            'type' => 'option'
+        )
+    );
+    $wp_customize->add_control(
+    // ID
+        'site_telephone_control',
+    // Массив аргументов
+        array(
+            'type' => 'text',
+            'label' => "Текст с телефоном",
+            'section' => 'data_site_section',
+            'settings' => 'site_telephone'
+        )
+    );
+    /*
+    Добавляем поле адреса site_address
+    */
+    $wp_customize->add_setting(
+    // ID
+        'site_address',
+    // Массив аргументов
+        array(
+            'default' => '',
+            'type' => 'option'
+        )
+    );
+    $wp_customize->add_control(
+    // ID
+        'site_address_control',
+    // Массив аргументов
+        array(
+            'type' => 'text',
+            'label' => "Адрес",
+            'section' => 'data_site_section',
+            'settings' => 'site_address'
+        )
+    );
+}
+add_action( 'customize_register', 'mbounosh43_contacts_customize_register' );
+
+/**
+ * КОНЕЦ Вывод контактных данных через настойки темы
+ **/

@@ -68,7 +68,59 @@ get_header();
                 <a href="category/novosti" class="news__more">Еще новости</a>
             </div>
         </div>
-
+        <div class="gallery">
+            <div class="container">
+                <div class="gallery__body">
+                    <div class="gallery__title">Наши будни</div>
+                    <div class="gallery__item-list">
+                        <?php echo do_shortcode( '[nggallery id=7 images=6]' ) ?>
+                        <a href="#" class="gallery__item-frame">
+                            <div class="gallery__item">
+                                <div class="gallery__img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_01.jpg" alt="Фото наши будни">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="gallery__item-frame">
+                            <div class="gallery__item">
+                                <div class="gallery__img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_02.jpg" alt="Фото наши будни">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="gallery__item-frame">
+                            <div class="gallery__item">
+                                <div class="gallery__img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_03.jpg" alt="Фото наши будни">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="gallery__item-frame">
+                            <div class="gallery__item">
+                                <div class="gallery__img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_04.jpg" alt="Фото наши будни">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="gallery__item-frame">
+                            <div class="gallery__item">
+                                <div class="gallery__img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_05.jpg" alt="Фото наши будни">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="gallery__item-frame">
+                            <div class="gallery__item">
+                                <div class="gallery__img">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery__photo_06.jpg" alt="Фото наши будни">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#" class="gallery__more">Еще фото</a>
+                </div>
+            </div>
+        </div>
         <div class="container-narrow">
             <div class="contact-form">
                 <div class="contact-form__photo">
@@ -76,9 +128,9 @@ get_header();
                 </div>
                 <div class="contact-form__contacts">
                     <div class="contact-form__title">Контакты:</div>
-                    <div class="contact-form__text">Адрес: 622048, обл. Свердловская, г. Нижний Тагил, ул. Зари, д. 30</div>
-                    <div class="contact-form__text">Телефон: <a href="tel:+73435310408">8 (3435) 31-04-08</a></div>
-                    <div class="contact-form__text">Электронная почта: <a href="mailto:skhool43@yandex.ru">skhool43@yandex.ru</a>
+                    <div class="contact-form__text">Адрес: <?php $tel = get_option('site_address'); if($tel != null){ ?> <?php echo get_option('site_address'); ?> <?php } ?></div>
+                    <div class="contact-form__text">Телефон: <a href="tel:<?php $tel = get_option('site_telephone'); if($tel != null){ ?><?php echo get_option('site_telephone'); ?><?php } ?>"><?php $tel = get_option('site_telephone'); if($tel != null){ ?><?php echo get_option('site_telephone'); ?><?php } ?></a></div>
+                    <div class="contact-form__text">Электронная почта: <a href="mailto:<?php $contact_inf = get_option('theme_contacttext'); if($contact_inf != null){ ?><?php echo $contact_inf; ?><?php } ?>"><?php $contact_inf = get_option('theme_contacttext'); if($contact_inf != null){ ?><?php echo $contact_inf; ?><?php } ?></a>
                     </div>
                     <div class="contact-form__form">
                         <div class="contact-form__title-form">Напишите нам:</div>

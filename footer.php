@@ -23,10 +23,28 @@
                 от 10 июля 2013 г. № 582
             </div>
             <div class="footer__column">
-                <div class="footer__address">Адрес: МАОУ НОШ № 43: 622048, обл. Свердловская, г. Нижний Тагил, ул. Зари, д. 30</div>
-                <div class="footer__phone-mail">Телефон: <a class="footer-link" href="tel:+73435310408">8 (3435) 31-04-08</a>.
+                <div class="footer__address">Адрес:
+                    <?php
+                    $tel = get_option('site_address');
+                    if($tel != null){ ?>
+                        <?php echo get_option('site_address'); ?>
+                    <?php } ?>
+                </div>
+                <div class="footer__phone-mail">Телефон: <a class="footer-link" href="tel:<?php $tel = get_option('site_telephone'); if($tel != null){ ?><?php echo get_option('site_telephone'); ?><?php } ?>">
+                        <?php
+                        $tel = get_option('site_telephone');
+                        if($tel != null){ ?>
+                            <?php echo get_option('site_telephone'); ?>
+                        <?php } ?>
+                    </a>.
                     <span class="footer__mail">Электронная почта:
-                        <a class="footer-link" href="mailto:skhool43@yandex.ru">skhool43@yandex.ru</a></span>
+                        <a class="footer-link" href="mailto:<?php $contact_inf = get_option('theme_contacttext'); if($contact_inf != null){ ?><?php echo $contact_inf; ?><?php } ?>">
+                            <?php
+                            $contact_inf = get_option('theme_contacttext');
+                            if($contact_inf != null){ ?>
+                                <?php echo $contact_inf; ?>
+                            <?php } ?>
+                        </a></span>
                 </div>
                 <div class="footer__politics"><a class="footer-link" href="mbounosh43.ru/wp-content/uploads/politika.pdf">Политика конфиденциальности</a></div>
                 <div class="footer__agreement"><a class="footer-link" href="mbounosh43.ru/wp-content/uploads/soglashenie.pdf">Пользовательское соглашение</a></div>

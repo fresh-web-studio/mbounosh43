@@ -56,10 +56,28 @@
                             Муниципальное автономное общеобразовательное учреждение начальная общеобразовательная школа №43
                         </div>
                         <div class="header__info">
-                            <div class="header__address">622048, обл. Свердловская, г. Нижний Тагил, ул. Зари, д. 30</div>
-                            <div class="header__phone-mail">Телефон: <a href="tel:+73435310408">8 (3435) 31-04-08</a>.
+                            <div class="header__address">
+                                <?php
+                                $tel = get_option('site_address');
+                                if($tel != null){ ?>
+                                    <?php echo get_option('site_address'); ?>
+                                <?php } ?>
+                            </div>
+                            <div class="header__phone-mail">Телефон: <a href="tel:<?php $tel = get_option('site_telephone'); if($tel != null){ ?><?php echo get_option('site_telephone'); ?><?php } ?>">
+                                    <?php
+                                    $tel = get_option('site_telephone');
+                                    if($tel != null){ ?>
+                                        <?php echo get_option('site_telephone'); ?>
+                                    <?php } ?>
+                                </a>.
                                 Электронная почта:
-                                <a href="mailto:skhool43@yandex.ru">skhool43@yandex.ru</a>
+                                <a href="mailto:<?php $contact_inf = get_option('theme_contacttext'); if($contact_inf != null){ ?><?php echo $contact_inf; ?><?php } ?>">
+                                    <?php
+                                    $contact_inf = get_option('theme_contacttext');
+                                    if($contact_inf != null){ ?>
+                                        <?php echo $contact_inf; ?>
+                                    <?php } ?>
+                                </a>
                             </div>
                         </div>
                     </div>
