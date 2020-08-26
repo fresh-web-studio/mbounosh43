@@ -2094,6 +2094,14 @@ footer.footer {
       font-size: 1.719vw * $coefficient;
       line-height: 2.083vw * $coefficient;
     }
+    .ngg-gallery-thumbnail {
+      width: ($container / 3) - ((1.042vw * $coefficient) * 2);
+      margin: 1.042vw * $coefficient 1.042vw * $coefficient;
+    }
+    .ngg-gallery-thumbnail a {
+      outline: 0.521vw * $coefficient solid #fff;
+      height: 13.021vw * $coefficient;
+    }
 
     .slide-wrapper {
       height: 21.615vw * $coefficient;
@@ -2682,6 +2690,14 @@ footer.footer {
       margin-bottom: 5vw;
       font-size: 1.719vw * $coefficient;
       line-height: 2.083vw * $coefficient;
+    }
+    .ngg-gallery-thumbnail {
+      width: ($container) - ((1.042vw * $coefficient) * 2);
+      margin: 1.042vw * $coefficient 1.042vw * $coefficient;
+    }
+    .ngg-gallery-thumbnail a {
+      outline: 0.521vw * $coefficient solid #fff;
+      height: 13.021vw * $coefficient;
     }
 
     .slide-wrapper {
