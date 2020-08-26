@@ -68,6 +68,7 @@ get_header();
                 <a href="category/novosti" class="news__more">Еще новости</a>
             </div>
         </div>
+
         <div class="container-narrow">
             <div class="contact-form">
                 <div class="contact-form__photo">
