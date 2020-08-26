@@ -1919,21 +1919,17 @@ footer.footer {
   main .ngg-gallery-thumbnail a {
     outline: 2.4104096364vw solid #fff;
     height: 60.2417348864vw; }
-  main q
-  .slide-wrapper {
+  main .slide-wrapper {
     margin-top: 9vw; }
-    main q
-    .slide-wrapper .slide-item-img {
+    main .slide-wrapper .slide-item-img {
       height: 30.93253vw;
       width: 94.583133vw;
       padding-left: 5.416867vw; }
-    main q
-    .slide-wrapper .owl-carousel .owl-nav button {
+    main .slide-wrapper .owl-carousel .owl-nav button {
       width: 4.88vw;
       height: 30.78vw;
       font-size: 4.88vw; }
-    main q
-    .slide-wrapper .owl-theme .owl-nav {
+    main .slide-wrapper .owl-theme .owl-nav {
       margin-top: 0.5vw; }
   main .news {
     /*      .news__item-frame:nth-child(n+4) {

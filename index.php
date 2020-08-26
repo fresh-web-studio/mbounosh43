@@ -164,7 +164,7 @@ get_header();
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="links__item-frame">
+                    <a href="https://minobraz.egov66.ru/" target="_blank" class="links__item-frame">
                         <div class="links__item">
                             <div class="links__img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/links__logo2.jpg" alt="Логотип">
@@ -179,7 +179,7 @@ get_header();
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="links__item-frame">
+                    <a href="https://ntagil.org/" target="_blank" class="links__item-frame">
                         <div class="links__item">
                             <div class="links__img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/links__logo3.jpg" alt="Логотип">
@@ -192,14 +192,14 @@ get_header();
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="links__item-frame">
+                    <a href="http://www.kpmo.ru/" target="_blank" class="links__item-frame">
                         <div class="links__item">
                             <div class="links__img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/links__logo4.jpg" alt="Логотип">
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="links__item-frame">
+                    <a href="http://fcior.edu.ru/" target="_blank" class="links__item-frame">
                         <div class="links__item">
                             <div class="links__img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/links__logo5.jpg" alt="Логотип">
@@ -212,7 +212,7 @@ get_header();
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="links__item-frame">
+                    <a href="http://ege.edu.ru/ru/" target="_blank" class="links__item-frame">
                         <div class="links__item">
                             <div class="links__img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/links__logo6.jpg" alt="Логотип">
@@ -225,7 +225,7 @@ get_header();
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="links__item-frame">
+                    <a href="https://www.edu.ru/" target="_blank" class="links__item-frame">
                         <div class="links__item">
                             <div class="links__img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/links__logo7.jpg" alt="Логотип">
@@ -238,7 +238,7 @@ get_header();
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="links__item-frame">
+                    <a href="http://window.edu.ru/" target="_blank" class="links__item-frame">
                         <div class="links__item">
                             <div class="links__img">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/links__logo8.jpg" alt="Логотип">
