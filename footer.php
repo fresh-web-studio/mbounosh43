@@ -46,8 +46,8 @@
                             <?php } ?>
                         </a></span>
                 </div>
-                <div class="footer__politics"><a class="footer-link" href="mbounosh43.ru/wp-content/uploads/politika.pdf">Политика конфиденциальности</a></div>
-                <div class="footer__agreement"><a class="footer-link" href="mbounosh43.ru/wp-content/uploads/soglashenie.pdf">Пользовательское соглашение</a></div>
+                <div class="footer__politics"><a class="footer-link" href="wp-content/uploads/politika.pdf">Политика конфиденциальности</a></div>
+                <div class="footer__agreement"><a class="footer-link" href="wp-content/uploads/soglashenie.pdf">Пользовательское соглашение</a></div>
             </div>
             <div class="footer__column">
                 <a href="https://csys.su/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-komsys.svg" alt="Комсис"></a>

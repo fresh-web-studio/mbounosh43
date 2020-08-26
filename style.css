@@ -1720,6 +1720,16 @@ footer.footer {
       width: 39.2vw;
       font-size: 0.9478vw;
       line-height: 1.1662vw; }
+  main .posts .post-thumbnail {
+    width: 36.4588vw; }
+  main .posts .nav-previous a, main .posts .nav-next a {
+    padding: 0.28vw 2.8vw;
+    height: 2.9162vw;
+    border-radius: 3.6456vw;
+    font-size: 1.4588vw;
+    line-height: 1.75vw; }
+  main .posts .nav-subtitle {
+    margin-right: 0.56vw; }
 
   footer.footer .footer__row {
     padding: 2.9162vw 0;
@@ -2133,6 +2143,12 @@ footer.footer {
       width: 129.54216856vw;
       font-size: 4vw;
       line-height: 5vw; }
+  main .posts .post-thumbnail {
+    width: 93vw; }
+  main .posts .post-navigation {
+    display: none; }
+  main .posts .entry-content, main .posts .post-edit-link {
+    margin: 3vw; }
 
   footer.footer .footer__row {
     padding: 9.6370120397vw 4.8208192728vw;

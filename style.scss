@@ -2439,6 +2439,22 @@ footer.footer {
         line-height: 0.833vw * $coefficient;
       }
     }
+    .posts {
+      .post-thumbnail {
+        width: 26.042vw * $coefficient;
+      }
+      .nav-previous a, .nav-next a {
+        padding: 0.2vw * $coefficient 2vw * $coefficient;
+        height: 2.083vw * $coefficient;
+        border-radius: 2.604vw * $coefficient;
+        font-size: 1.042vw * $coefficient;
+        line-height: 1.250vw * $coefficient;
+      }
+      .nav-subtitle {
+        margin-right: 0.4vw * $coefficient;
+      }
+
+    }
   }
   footer.footer {
     .footer__row {
@@ -3038,6 +3054,18 @@ footer.footer {
         width: 28vw * $coefficient;
         font-size: 4vw;
         line-height: 5vw;
+      }
+    }
+
+    .posts {
+      .post-thumbnail {
+        width: 93vw;
+      }
+      .post-navigation {
+        display: none;
+      }
+      .entry-content, .post-edit-link {
+        margin: 3vw;
       }
     }
   }
