@@ -808,8 +808,8 @@ header nav.header__row {
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle.current-menu-ancestor > a,
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle.current-menu-item > a,
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle.current-menu-parent > a,
-        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current_page_item > a
-        li.menu-item-subtitle:hover.current-menu-ancestor > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current_page_item > a,
+        header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current-menu-ancestor > a,
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current-menu-item > a,
         header nav.header__row ul.top-menu li .sub-menu li.menu-item-subtitle:hover.current-menu-parent > a {
           color: #FEC22E; }

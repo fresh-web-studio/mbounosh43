@@ -226,7 +226,7 @@ function register_post_types(){
         'exclude_from_search' => true, // зависит от public
         'show_ui'             => true, // зависит от public
         'show_in_nav_menus'   => true, // зависит от public
-        'show_in_menu'        => true, // показывать ли в меню адмнки
+        'show_in_menu'        => true, // показывать ли в меню админки
         'show_in_admin_bar'   => true, // зависит от show_in_menu
         'show_in_rest'        => null, // добавить в REST API. C WP 4.7
         'rest_base'           => null, // $post_type. C WP 4.7
@@ -268,7 +268,7 @@ function register_post_types_links(){
         'exclude_from_search' => true, // зависит от public
         'show_ui'             => true, // зависит от public
         'show_in_nav_menus'   => true, // зависит от public
-        'show_in_menu'        => true, // показывать ли в меню адмнки
+        'show_in_menu'        => true, // показывать ли в меню админки
         'show_in_admin_bar'   => true, // зависит от show_in_menu
         'show_in_rest'        => null, // добавить в REST API. C WP 4.7
         'rest_base'           => null, // $post_type. C WP 4.7
@@ -287,7 +287,7 @@ function register_post_types_links(){
 }
 */
 /**
- * Создаем свой слайдер на бозе OwlCarusel
+ * Создаем свой слайдер на бозе OwlCarousel
  */
 
 add_action( 'init', 'register_group_post_type' );
