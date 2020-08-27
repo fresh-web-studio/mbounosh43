@@ -87,15 +87,6 @@ html {
     display: block;
   }
 
-  /**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
-
   /* Grouping content
        ========================================================================== */
 
@@ -734,11 +725,6 @@ html {
     display: block;
   }
 
-  .post,
-  .page {
-    margin: 0 0 1.5em;
-  }
-
   .updated:not(.published) {
     display: none;
   }
@@ -961,6 +947,7 @@ button {
 $blue: #2D87C9;
 $blue-light: #02adff;
 $red: #DC2C16;
+$yellow: #FEC22E;
 
 $container: 69.583vw;
 $narrow: 63.281vw;
@@ -1059,7 +1046,7 @@ header {
       li.current-menu-ancestor > a,
       li.current-menu-item > a,
       li.current-menu-parent > a {
-        color: $red;
+        color: $yellow;
       }
       li {
         position: relative;
@@ -1069,7 +1056,7 @@ header {
         a {
           display: table-cell;
           vertical-align: middle;
-          padding: 0 0.781vw;
+          padding: 0 0.781vw 0;
           color: #fff;
           font-size: 1.042vw;
           @media (max-width: $break) {
@@ -1110,7 +1097,7 @@ header {
           li.menu-item-title:hover.current-menu-ancestor > a,
           li.menu-item-title:hover.current-menu-item > a,
           li.menu-item-title:hover.current-menu-parent > a{
-            color: $red;
+            color: $yellow;
           }
           li.menu-item-title{
             cursor: pointer;
@@ -1135,7 +1122,7 @@ header {
           li.menu-item-subtitle:hover.current-menu-ancestor > a,
           li.menu-item-subtitle:hover.current-menu-item > a,
           li.menu-item-subtitle:hover.current-menu-parent > a{
-            color: $red;
+            color: $yellow;
           }
           li.menu-item-subtitle {
             a {
@@ -1883,7 +1870,22 @@ main {
     }
 
   }
-
+  article {
+    .entry-title {
+      margin-top: 3vw;
+      font-size: 1.719vw;
+      line-height: 2.083vw;
+      align-items: center;
+      text-align: center;
+    }
+    .entry-content {
+      p {
+        margin-top: 0.833vw;
+        margin-bottom: 0.833vw;
+        font-size: 1.042vw;
+      }
+    }
+  }
   .posts {
     .entry-title {
       text-align: center;
@@ -2439,6 +2441,20 @@ footer.footer {
         line-height: 0.833vw * $coefficient;
       }
     }
+    article {
+      .entry-title {
+        margin-top: 3vw * $coefficient;
+        font-size: 1.719vw * $coefficient;
+        line-height: 2.083vw * $coefficient;
+      }
+      .entry-content {
+        p {
+          margin-top: 0.833vw * $coefficient;
+          margin-bottom: 0.833vw * $coefficient;
+          font-size: 1.042vw * $coefficient;
+        }
+      }
+    }
     .posts {
       .post-thumbnail {
         width: 26.042vw * $coefficient;
@@ -2563,6 +2579,13 @@ footer.footer {
         li.menu-item.active {
           background-color: #CFD8DC;
         }
+        li.menu-item.current_page_item > a,
+        li.menu-item.current-menu-ancestor > a,
+        li.menu-item.current-menu-item > a,
+        li.menu-item.current-menu-parent > a {
+          color: $yellow;
+        }
+
         /* элементы меню */
         li.menu-item a {
           padding: 3vw 4vw;
@@ -3056,7 +3079,21 @@ footer.footer {
         line-height: 5vw;
       }
     }
-
+    article {
+      margin: 0.6vw * $coefficient 0.990vw * $coefficient;
+      .entry-title {
+        margin-top: 3vw * $coefficient;
+        font-size: 1.719vw * $coefficient;
+        line-height: 2.083vw * $coefficient;
+      }
+      .entry-content {
+        p {
+          margin-top: 0.833vw * $coefficient;
+          margin-bottom: 0.833vw * $coefficient;
+          font-size: 1.042vw * $coefficient;
+        }
+      }
+    }
     .posts {
       .post-thumbnail {
         width: 93vw;
