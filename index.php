@@ -53,7 +53,11 @@ get_header();
                         <a href="<?php the_permalink(); ?>" class="news__item-frame">
                             <div class="news__item">
                                 <div class="news__img">
-                                    <?php the_post_thumbnail ('news-thumb')?>
+                                    <?php if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail('news-thumb');
+                                    } else { ?>
+                                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/new.jpg" alt="<?php the_title(); ?>" />
+                                    <?php } ?>
                                 </div>
                                 <div class="news__info">
                                     <div class="news__item-title"><?php the_title(); ?></div>
