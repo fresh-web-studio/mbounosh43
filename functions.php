@@ -61,8 +61,6 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 
 			array(
                 'top-menu' => __( 'top-menu', 'mbounosh43' ),
-                'left-menu' => __( 'left-menu', 'mbounosh43' ),
-
 			)
 		);
 
@@ -143,6 +141,25 @@ if ( ! function_exists( 'mbounosh43_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'mbounosh43_setup' );
+
+
+/**
+ * Добавления виджета в header
+ */
+function wpb_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => __( 'Header Widget Area', 'snowsummit' ),
+        'id'            => 'header-widget-area',
+        'description' => __( 'Место для виджета в header с правой стороны сайта', 'snowsummit' ),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -414,7 +431,7 @@ function mbounosh43_contacts_customize_register( $wp_customize ) {
     // Массив аргументов
         array(
             'type' => 'text',
-            'label' => "Текст с телефоном",
+            'label' => "Телефон",
             'section' => 'data_site_section',
             'settings' => 'site_telephone'
         )

@@ -45,6 +45,12 @@
                         'menu_class'      => 'top-menu',
                         'menu_id'         => 'nav',
                     )); ?>
+                    <?php
+                    if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+                        <div id="header-widget" class="chw-widget-area widget-area" role="complementary">
+                            <?php dynamic_sidebar( 'header-widget-area' ); ?>
+                        </div><!-- #feature.widget-area -->
+                    <?php endif; ?>
                 </nav>
 
                 <div class="header__row">

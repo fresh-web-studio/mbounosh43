@@ -96,7 +96,7 @@ get_header();
                     </div>
                     <div class="contact-form__form">
                         <div class="contact-form__title-form">Напишите нам:</div>
-                        <?php echo do_shortcode('[contact-form-7 id="9953" title="Форма для главной страницы"]'); ?>
+                        <?php echo do_shortcode('[contact-form-7 id="9937" title="Форма для главной страницы"]'); ?>
                     </div>
                 </div>
 
