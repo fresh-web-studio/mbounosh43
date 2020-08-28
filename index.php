@@ -80,9 +80,7 @@ get_header();
             <div class="container">
                 <div class="gallery__body">
                     <div class="gallery__title">Наши будни</div>
-                    <div class="gallery__item-list">
-                        <?php echo do_shortcode( '[nggallery id=7 images=6]' ) ?>
-                    </div>
+                    <?php echo do_shortcode( '[nggallery id=7 images=6]' ) ?>
                     <a href="fotogalereya/" class="gallery__more">Еще фото</a>
                 </div>
             </div>

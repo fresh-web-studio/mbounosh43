@@ -880,7 +880,7 @@ header nav.header__row {
   header nav.header__row #cr_version_link img {
     width: 9.792vw; }
   header nav.header__row #cr_widget_img a {
-    top: 2.8vw;
+    top: 1.2vw;
     right: 15.2vw; }
 header .header__row {
   display: flex;
@@ -934,18 +934,31 @@ main .pagination {
     background-color: #DC2C16; }
   main .pagination span.page-numbers.dots {
     background-color: #2D87C9; }
-main .ngg-gallery-thumbnail {
+main .ngg-gallery-thumbnail-box {
   width: 21.1103333333vw;
-  margin: 1.042vw 1.042vw; }
+  margin: 1.042vw 1.042vw;
+  float: none;
+  max-width: 100% !important; }
+main .ngg-gallery-thumbnail {
+  border: 0;
+  background-color: transparent;
+  margin: 0; }
 main .ngg-gallery-thumbnail a {
-  outline: 0.521vw solid #fff;
+  outline: 0.921vw solid #fff;
   height: 13.021vw;
+  margin: 0.781vw;
   display: flex;
   justify-content: center;
   overflow: hidden;
   opacity: .9; }
 main .ngg-gallery-thumbnail a:hover {
   opacity: 1; }
+main .ngg-galleryoverview {
+  display: flex !important;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 2vw;
+  margin-top: 0; }
 main .slide-wrapper {
   height: 21.615vw;
   margin-top: 2.083vw; }
@@ -1074,6 +1087,8 @@ main .news {
   main .news .news__more:hover {
     background: linear-gradient(90.4deg, #b20026 0.2%, #ce2510 101.73%);
     box-shadow: 0.26vw 0.26vw 1.042vw rgba(0, 0, 0, 0.51); }
+  main .news .posts {
+    text-align: center; }
 main .gallery {
   padding: 5.677vw 0;
   background-image: url("assets/img/gallery__bg.jpg");
@@ -1089,11 +1104,6 @@ main .gallery {
     font-weight: bold;
     text-align: center;
     color: #fff; }
-  main .gallery .gallery__item-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 2vw; }
   main .gallery .gallery__img {
     outline: 0.521vw solid #fff;
     height: 13.021vw;
@@ -1483,7 +1493,7 @@ footer.footer {
   header nav.header__row #cr_version_link img {
     width: 13.7088vw; }
   header nav.header__row #cr_widget_img a {
-    top: 3.92vw;
+    top: 1.8vw;
     right: 1.042vw; }
   header .header__logo {
     margin-left: 8.0934vw;
@@ -1515,12 +1525,21 @@ footer.footer {
     margin-top: 7.9478vw;
     font-size: 2.4066vw;
     line-height: 2.9162vw; }
+  main .ngg-gallery-thumbnail-box {
+    width: 30.5173333333vw;
+    margin: 1.042vw 1.042vw;
+    float: none;
+    max-width: 100% !important; }
   main .ngg-gallery-thumbnail {
-    width: 29.6837333333vw;
-    margin: 1.4588vw 1.4588vw; }
+    border: 0;
+    background-color: transparent;
+    margin: 0; }
   main .ngg-gallery-thumbnail a {
-    outline: 0.7294vw solid #fff;
-    height: 18.2294vw; }
+    outline: 1.2894vw solid #fff;
+    height: 18.2294vw;
+    margin: 1.6vw; }
+  main .ngg-galleryoverview {
+    display: flex !important; }
   main .slide-wrapper {
     height: 30.261vw;
     margin-top: 2.9162vw; }
@@ -1953,12 +1972,30 @@ footer.footer {
     margin-bottom: 5vw;
     font-size: 7.9529638484vw;
     line-height: 9.6370120397vw; }
+  main .ngg-gallery-thumbnail-box {
+    width: 100vw;
+    margin: 1.042vw 1.042vw;
+    float: none;
+    max-width: 100% !important; }
   main .ngg-gallery-thumbnail {
-    width: 90.3583614543vw;
-    margin: 4.8208192728vw 4.8208192728vw; }
+    border: 0;
+    background-color: transparent;
+    margin: 0; }
   main .ngg-gallery-thumbnail a {
-    outline: 2.4104096364vw solid #fff;
-    height: 60.2417348864vw; }
+    outline: 4.2610120444vw solid #fff;
+    height: 53vw;
+    margin: 8.6vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    opacity: .9; }
+  main .ngg-gallery-thumbnail a:hover {
+    opacity: 1; }
+  main .ngg-galleryoverview {
+    display: flex !important;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0; }
   main .slide-wrapper {
     margin-top: 9vw; }
     main .slide-wrapper .slide-item-img {
