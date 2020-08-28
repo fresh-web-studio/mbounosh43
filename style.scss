@@ -1201,6 +1201,13 @@ header {
     @media (max-width: $break) {
       height: auto;
     }
+    #cr_version_link img {
+      width: 9.792vw;
+    }
+    #cr_widget_img a {
+      top: 2.8vw;
+      right: 15.2vw;
+    }
   }
   .header__row {
     display: flex;
@@ -2057,6 +2064,13 @@ footer.footer {
           height: 0.2vw * $coefficient;
         }
       }
+      #cr_version_link img {
+        width: 9.792vw * $coefficient;
+      }
+      #cr_widget_img a {
+        top: 2.8vw * $coefficient;
+        right: 1.042vw;
+      }
     }
 
     .header__logo {
@@ -2705,6 +2719,17 @@ footer.footer {
         transition-duration: .4s;
       }
       /************** /Burger menu mobile ***************/
+
+      #cr_version_link img {
+        width: 20vw;
+      }
+      #cr_widget_img a {
+        top: 16.92vw;
+        right: 3.28vw;
+        overflow: hidden;
+        width: 9vw;
+      }
+
     }
     .header__back {
       height: 18vw;
