@@ -884,18 +884,18 @@ header nav.header__row {
     header nav.header__row ul.top-menu li.menu-btn-left > a:before,
     header nav.header__row ul.top-menu li.menu-btn-left > a:after {
       font-size: 0;
-      margin-top: 1vw;
-      height: 0.2vw;
+      margin-top: 1.2vw;
+      height: 0.149vw;
       width: 1.531vw;
       padding: 0;
       display: block;
       position: relative;
       background-color: #fff; }
     header nav.header__row ul.top-menu li.menu-btn-left > a:before {
-      top: -0.5vw;
+      top: -0.49vw;
       content: "";
       margin-top: 0;
-      height: 0.149vw; }
+      height: 0.14vw; }
     header nav.header__row ul.top-menu li.menu-btn-left > a:after {
       top: 0.4vw;
       content: "";
