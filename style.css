@@ -912,7 +912,8 @@ header nav.header__row {
     width: 9.792vw;
     height: 1.964vw; }
   header nav.header__row #cr_widget_img a {
-    top: 1.2vw;
+    position: absolute;
+    top: 1.7vw;
     right: 15.2vw; }
 header .header__row {
   display: -webkit-flex;
